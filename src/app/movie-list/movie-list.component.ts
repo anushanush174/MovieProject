@@ -30,7 +30,6 @@ export class MovieListComponent implements OnInit {
         this.raiting = moviesArray[i].ratings.reduce((a, b) => a + b, 0)
         this.roundedRaiting = this.raiting / moviesArray[i].ratings.length
         moviesArray[i].currentRaiting = this.roundedRaiting
-        console.log(moviesArray[i].currentRaiting)
       }
     })
   }
