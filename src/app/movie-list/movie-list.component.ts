@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-movie-list',
@@ -8,20 +9,16 @@ import { HttpClient } from '@angular/common/http'
 })
 export class MovieListComponent implements OnInit {
 
-  url = "http://localhost:3000/movies";
+  url = environment.apiUrl;
   movies;
   roundedRaiting;
   raiting;
+
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     this.getRoundedRaiting()
-    // this.getMOvieList();
   }
-
-  // getMOvieList() {
-  //   this.http.get(this.url).subscribe(moviesArray => this.movies = moviesArray);
-  // }
 
   getRoundedRaiting() {
     this.http.get(this.url).subscribe(moviesArray => {
@@ -33,4 +30,8 @@ export class MovieListComponent implements OnInit {
       }
     })
   }
+
+  // getMOvieList() {
+  //   this.http.get(this.url).subscribe(moviesArray => this.movies = moviesArray);
+  // }
 }
