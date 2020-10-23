@@ -3,20 +3,16 @@
         <div class="imgConteiner">
             <img src="{{movie.posterurl}}" class="imgClass">
         </div>
-
         <div>
             <span>
                 <h1 style="display: inline" class="title">{{movie.title}}</h1>
-                <h2 class="year">{{'(' + movie.year + ')'}}</h2>
-
+                <h2 class="year">({{movie.year}})</h2>
                 <div>
                     <small> <strong>Genre:</strong> {{movie.genres}}</small> <br>
                     <small> <strong>Actors:</strong> {{movie.actors}}</small> <br>
                     <small> <strong>Duration:</strong> {{movie.duration}}</small> <br>
-                    <small> <strong>Raiting:</strong> {{movie.raitings}}</small>
-
+                    <small> <strong>Raiting:</strong> {{movie.currentRaiting | number:'1.1-2'}} from 10 </small>
                 </div>
-
                 <div class="t">
                     <h4>Description</h4>
                     {{movie.storyline}}

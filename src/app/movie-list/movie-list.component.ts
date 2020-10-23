@@ -11,27 +11,27 @@ export class MovieListComponent implements OnInit {
   url = "http://localhost:3000/movies";
   movies;
   roundedRaiting;
-  raitings;
-  constructor(private http: HttpClient) {
-    console.log(this.movies);
-  }
+  raiting;
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     this.getRoundedRaiting()
-    this.getMOvieList();
-    
+    // this.getMOvieList();
   }
 
-  getMOvieList() {
-    this.http.get(this.url).subscribe(moviesArray => this.movies = moviesArray);
-
-  }
+  // getMOvieList() {
+  //   this.http.get(this.url).subscribe(moviesArray => this.movies = moviesArray);
+  // }
 
   getRoundedRaiting() {
     this.http.get(this.url).subscribe(moviesArray => {
       this.movies = moviesArray;
-      console.log(moviesArray );
+      for (let i in moviesArray) {
+        this.raiting = moviesArray[i].ratings.reduce((a, b) => a + b, 0)
+        this.roundedRaiting = this.raiting / moviesArray[i].ratings.length
+        moviesArray[i].currentRaiting = this.roundedRaiting
+        console.log(moviesArray[i].currentRaiting)
+      }
     })
-
   }
 }
