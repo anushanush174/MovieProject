@@ -1,23 +1,27 @@
 <div>
-    <div *ngFor="let movie of movies" class="movieList">
-        <div class="imgConteiner">
-            <img src="{{movie.posterurl}}" class="imgClass">
+    <div *ngFor="let movie of movieList" class="movie-list">
+        <div class="img-conteiner">
+            <img src="{{movie.posterurl}}" class="img-class">
         </div>
         <div>
             <span>
-                <h1 style="display: inline" class="title">{{movie.title}}</h1>
+                <h1 class="title">{{movie.title}}</h1>
                 <h2 class="year">({{movie.year}})</h2>
                 <div>
                     <small> <strong>Genre:</strong> {{movie.genres}}</small> <br>
                     <small> <strong>Actors:</strong> {{movie.actors}}</small> <br>
                     <small> <strong>Duration:</strong> {{movie.duration}}</small> <br>
-                    <small> <strong>Raiting:</strong> {{movie.currentRaiting | number:'1.1-2'}} from 10 </small>
+                    <small> <strong>Raiting:</strong> {{movie.rateingAverage | number:'1.1-2'}} from 10 </small>
                 </div>
-                <div class="t">
+                <div class="description">
                     <h4>Description</h4>
                     {{movie.storyline}}
                 </div>
             </span>
         </div>
+    </div>
+    <div>
+        <button (click)="previewPage()">Preview</button>
+        <button (click)="nextPage()">Next</button>
     </div>
 </div>

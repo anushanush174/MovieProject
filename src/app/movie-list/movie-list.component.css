@@ -1,4 +1,4 @@
-.movieList{
+.movie-list{
     border-style: double;
     margin-top: 5px;
     border-radius: 10px;
@@ -11,26 +11,27 @@
     margin-left: 300px;
 }
 
-.imgConteiner {
+.img-conteiner {
     padding-right: 1em;
     float: left;
     width: 50%;
     max-width: 200px;
   }
 
-  .imgClass{
+.img-class{
     width: 100%;
     height:  100%;
-  }
+}
 
 .title{
     color: darkslategrey;
+    display: inline;
 }
 
 .year{
     color: darkslategrey;
 }
 
-.t{
+.description{
     text-align: justify;
 }

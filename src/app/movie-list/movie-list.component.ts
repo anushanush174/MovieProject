@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
-import { environment } from 'src/environments/environment';
+import { MovieService } from './movie.service';
 
 @Component({
   selector: 'app-movie-list',
@@ -8,30 +7,20 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./movie-list.component.css']
 })
 export class MovieListComponent implements OnInit {
+  public movieList;
+  private currentPage = 1
 
-  url = environment.apiUrl;
-  movies;
-  roundedRaiting;
-  raiting;
-
-  constructor(private http: HttpClient) { }
+  constructor(private movieServise: MovieService) { }
 
   ngOnInit(): void {
-    this.getRoundedRaiting()
-  }
-
-  getRoundedRaiting() {
-    this.http.get(this.url).subscribe(moviesArray => {
-      this.movies = moviesArray;
-      for (let i in moviesArray) {
-        this.raiting = moviesArray[i].ratings.reduce((a, b) => a + b, 0)
-        this.roundedRaiting = this.raiting / moviesArray[i].ratings.length
-        moviesArray[i].currentRaiting = this.roundedRaiting
-      }
+    this.movieServise.getMovieList(this.currentPage).subscribe(data => {
+      this.movieList = this.movieServise.getRatingAvarage(data)
     })
+
+    this.movieServise.nextPage(this.currentPage)
+    this.movieServise.previewPage(this.currentPage)
   }
 
-  // getMOvieList() {
-  //   this.http.get(this.url).subscribe(moviesArray => this.movies = moviesArray);
-  // }
+
+
 }
