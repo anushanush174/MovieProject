@@ -1,0 +1,20 @@
+.first{
+    width: 200px;
+    display: table-cell;
+}
+
+.second{
+    width: 200px;
+    display: table-cell;
+}
+
+.third{
+    width: 200px;
+    display: table-cell;
+}
+
+.search-button{
+    width: 100%;
+    padding: 12px 28px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
