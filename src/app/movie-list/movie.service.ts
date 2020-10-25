@@ -4,13 +4,12 @@ import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class MovieService {
-    // public currentPage = 1
     private API_URL = environment.API_URL;
 
     constructor(private http: HttpClient) { }
 
     getMovieList(page) {
-        return this.http.get(this.API_URL + `?_page=${page}&_limit=20`)
+        return this.http.get(this.API_URL + `?_page=${page}&_limit=10`)
     }
 
     getRatingAvarage(list): any {
@@ -18,14 +17,6 @@ export class MovieService {
             movie.rateingAverage = movie.ratings.reduce((a, b) => a + b, 0) / movie.ratings.length;
         })
         return list
-    }
-
-    previewPage(page) {
-        return --page
-    }
-
-    nextPage(page) {
-        return ++page
     }
 
 }
