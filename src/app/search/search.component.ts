@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { MovieService } from '../movie-list/movie.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-search',
@@ -8,9 +9,8 @@ import { MovieService } from '../movie-list/movie.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+  private API_URL = environment.API_URL
   form: FormGroup;
-  public movieList;
-  private currentPage = 1
   constructor(private movieService: MovieService) { };
 
   ngOnInit() {
@@ -18,27 +18,22 @@ export class SearchComponent implements OnInit {
       title: new FormControl(''),
       year: new FormControl(''),
     })
-
-    this.getMovies()
-  }
-
-  getMovies() {
-    this.movieService.getMovieList().subscribe(data => {
-      this.movieList = this.movieService.getRatingAvarage(data)
-    });
+    
   }
 
   onSubmit() {
-    // console.log(this.form)
     const formData = { ...this.form.value }
-    // console.log(formData.title) 
-    // console.log(this.movieList)
-    this.movieList.filter(movie => {
-      if (movie.title.toLowerCase() === formData.title.toString().toLowerCase())
-        console.log(formData.title.toString().toLowerCase())
-      // console.log(movie.year === formData.year.toString())
-    })
+    // console.log(this.form)
+    // console.log(formData)
+    //  console.log(formData.year)
+    // let filteredTitle = this.API_URL + `?title=${formData.title}`
+    // let filteredYear = this.API_URL + `?year=${formData.year}`
+    // console.log(filteredTitle)
+    // console.log(filteredYear)
 
+    this.movieService.getFilteredMovieList(formData.year).subscribe(year=>{
+      console.log(year)
+    })
   }
 
 }

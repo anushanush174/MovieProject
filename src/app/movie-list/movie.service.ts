@@ -23,4 +23,7 @@ export class MovieService {
         return list
     }
 
+    getFilteredMovieList(data){
+        return this.http.get(this.API_URL + `?year=${data}`)
+    }
 }
