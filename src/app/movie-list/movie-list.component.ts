@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MovieService } from './movie.service';
 
 @Component({
@@ -7,7 +7,8 @@ import { MovieService } from './movie.service';
   styleUrls: ['./movie-list.component.css']
 })
 export class MovieListComponent implements OnInit {
-  public movieList;
+  @Input() public movieList;
+ 
   private currentPage = 1
 
   constructor(private movieServise: MovieService) { }
@@ -31,5 +32,6 @@ export class MovieListComponent implements OnInit {
     this.currentPage++;
     this.getMovies();
   }
+
 
 }

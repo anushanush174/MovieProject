@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { MovieService } from '../movie-list/movie.service';
-import { environment } from 'src/environments/environment';
+import { MovieService } from '../movie-list/movie.service';;
 
 @Component({
   selector: 'app-search',
@@ -9,8 +8,10 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  private API_URL = environment.API_URL
-  form: FormGroup;
+  public form: FormGroup;
+  @Output() filteredYearsList: EventEmitter<any> = new EventEmitter()
+
+
   constructor(private movieService: MovieService) { };
 
   ngOnInit() {
@@ -18,11 +19,18 @@ export class SearchComponent implements OnInit {
       title: new FormControl(''),
       year: new FormControl(''),
     })
-    
   }
 
   onSubmit() {
     const formData = { ...this.form.value }
+
+    this.movieService.getFilteredMovieList(formData.year).subscribe(filteredByYear => {
+      console.log(filteredByYear)
+      this.filteredYearsList.emit(filteredByYear)
+    })
+
+
+
     // console.log(this.form)
     // console.log(formData)
     //  console.log(formData.year)
@@ -30,14 +38,5 @@ export class SearchComponent implements OnInit {
     // let filteredYear = this.API_URL + `?year=${formData.year}`
     // console.log(filteredTitle)
     // console.log(filteredYear)
-
-    this.movieService.getFilteredMovieList(formData.year).subscribe(year=>{
-      console.log(year)
-    })
-
-
-
-    
   }
-
 }
