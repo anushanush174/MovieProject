@@ -34,8 +34,8 @@ export class SearchComponent implements OnInit {
     // console.log(formData.title) 
     // console.log(this.movieList)
     this.movieList.filter(movie => {
-      if(movie.title.toLowerCase() === formData.title.toString().toLowerCase())
-      console.log( formData.title.toString().toLowerCase())
+      if (movie.title.toLowerCase() === formData.title.toString().toLowerCase())
+        console.log(formData.title.toString().toLowerCase())
       // console.log(movie.year === formData.year.toString())
     })
 
