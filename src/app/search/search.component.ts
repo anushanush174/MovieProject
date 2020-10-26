@@ -34,6 +34,10 @@ export class SearchComponent implements OnInit {
     this.movieService.getFilteredMovieList(formData.year).subscribe(year=>{
       console.log(year)
     })
+
+
+
+    
   }
 
 }
