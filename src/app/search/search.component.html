@@ -1,17 +1,21 @@
-<div class="bottom">
-    <div class="first">
-        <label for="title"></label>
-        <input id="title" type="text" placeholder="Film Title">
-    </div>
-    <div class="second">
-        <label for="year"></label>
-        <input id="year" type="number" placeholder="Film Year">
-    </div>
-    <div class="third">
-        <label for="genre"></label>
-        <input id="genre" type="text" placeholder="Film Genre">
-    </div>
-</div> <br>
-<div>
-    <button class="search-button"> Search </button>
+<div class="botton">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="first">
+            <label for="title"></label>
+            <input id="title" type="text" placeholder="Film Title" formControlName="title">
+        </div>
+        <div class="second">
+            <label for="year"></label>
+            <input id="year" type="number" placeholder="Film Year" formControlName="year">
+        </div>
+        <div class="third">
+            <label for="genre"></label>
+            <input id="genre" type="text" placeholder="Film Genre">
+        </div>
+        <br>
+        <div>
+            <button class="search-button" type="submit"> Search </button>
+
+        </div>
+    </form>
 </div>

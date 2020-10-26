@@ -17,7 +17,7 @@ export class MovieListComponent implements OnInit {
   }
 
   getMovies(){
-    this.movieServise.getMovieList(this.currentPage).subscribe(data => {
+    this.movieServise.getLimitedMovieList(this.currentPage).subscribe(data => {
       this.movieList = this.movieServise.getRatingAvarage(data)
     });
   }

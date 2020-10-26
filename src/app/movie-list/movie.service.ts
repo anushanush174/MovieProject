@@ -8,8 +8,12 @@ export class MovieService {
 
     constructor(private http: HttpClient) { }
 
-    getMovieList(page) {
+    getLimitedMovieList(page) {
         return this.http.get(this.API_URL + `?_page=${page}&_limit=10`)
+    }
+
+    getMovieList() {
+        return this.http.get(this.API_URL)
     }
 
     getRatingAvarage(list): any {
