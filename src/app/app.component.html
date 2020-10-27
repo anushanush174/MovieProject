@@ -1,5 +1,11 @@
-<div><app-search (filteredYearsList)="getFilteredList($event)"></app-search></div>
 <div>
-  <app-movie-list [movieList]="newMovieList"> 
+  <app-search 
+    (onFilteredList)="getFilteredList($event)"
+
+  >
+  </app-search>
+</div>
+<div>
+  <app-movie-list [movieList]="filteredList">
   </app-movie-list>
 </div>

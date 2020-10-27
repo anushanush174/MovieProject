@@ -7,9 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  newMovieList;
+  public filteredList: any
 
   getFilteredList(list){
-    this.newMovieList = list
+    this.filteredList = list
   }
+
+  // getFilteredByTitleList(list){
+  //   this.filteredList = list
+  // }
  }
