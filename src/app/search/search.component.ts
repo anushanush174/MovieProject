@@ -23,7 +23,7 @@ export class SearchComponent implements OnInit {
   onSubmit(): void {
     const formData = { ...this.form.value };
     const year = formData.year;
-    const title = formData.title.toLowerCase();
+    const title = formData.title;
     this.movieService.paramsForSearch.year = year;
     this.movieService.paramsForSearch.title = title;
     this.movieService.getMovieList();

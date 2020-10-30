@@ -37,9 +37,9 @@ export class MovieService {
   getMovieList(): void {
     let url = '?';
     const keys = Object.keys(this.paramsForSearch); // ["_page", "_limit", "year", "title"]
-    keys.forEach( keys => { // console.log(key)  _page ...
-      if (this.paramsForSearch[keys]) {
-        url = url + keys + '=' + this.paramsForSearch[keys] + '&';
+    keys.forEach( key => { // console.log(key)  _page ...
+      if (this.paramsForSearch[key]) {
+        url = url + key + '=' + this.paramsForSearch[key] + '&';
       }
     });
     this.http.get(this.API_URL + url).subscribe((movies) => {
