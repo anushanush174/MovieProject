@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { MovieService } from './movie.service';
 
 @Component({
@@ -7,30 +7,32 @@ import { MovieService } from './movie.service';
   styleUrls: ['./movie-list.component.css']
 })
 export class MovieListComponent implements OnInit {
-  @Input() public movieList;
- 
-  private currentPage = 1
+  public movieList;
+  public currentPage: number = 1;
 
   constructor(private movieServise: MovieService) { }
 
   ngOnInit(): void {
     this.getMovies();
+    this.movieServise.getMovieList()
   }
 
-  getMovies(){
-    this.movieServise.getLimitedMovieList(this.currentPage).subscribe(data => {
+  getMovies() {
+    this.movieServise.getLimitedMovieList().subscribe(data => {
       this.movieList = this.movieServise.getRatingAvarage(data)
     });
   }
 
   previewPage() {
-    this.currentPage--;
+    this.movieServise.paramsForSearch._page--;
     this.getMovies();
   }
 
   nextPage() {
-    this.currentPage++;
+    this.movieServise.paramsForSearch._page++;
     this.getMovies();
+    console.log(this.movieServise.paramsForSearch._page++
+    )
   }
 
 }

@@ -1,6 +1,6 @@
-import { IfStmt } from '@angular/compiler';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Subject } from 'rxjs';
 import { MovieService } from '../movie-list/movie.service';;
 
 @Component({
@@ -10,9 +10,7 @@ import { MovieService } from '../movie-list/movie.service';;
 })
 export class SearchComponent implements OnInit {
   public form: FormGroup;
-  @Output() onFilteredList: EventEmitter<any> = new EventEmitter()
-  // @Output() onTitleFilteredList: EventEmitter<any> = new EventEmitter()
-
+  subject = new Subject<any>()
   constructor(private movieService: MovieService) { };
 
   ngOnInit() {
@@ -24,24 +22,10 @@ export class SearchComponent implements OnInit {
 
   onSubmit() {
     const formData = { ...this.form.value }
-
-    this.movieService.getFilteredList(formData.year, formData.title).subscribe(filteredList => {
-      console.log(filteredList)
-      this.onFilteredList.emit(filteredList)
-    })
-
-    // this.movieService.getFilteredListByTitle(formData.title).subscribe(filteredByTitleList => {
-    //   this.onTitleFilteredList.emit(filteredByTitleList)
-    // })
-
-    // console.log(filteredByYear)
-    // console.log(this.form.value)
-    // console.log(this.form)
-    // console.log(formData)
-    // console.log(formData.year)
-    // let filteredTitle = this.API_URL + `?title=${formData.title}`
-    // let filteredYear = this.API_URL + `?year=${formData.year}`
-    // console.log(filteredTitle)
-    // console.log(filteredYear)
+    let year = formData.year;
+    let title = formData.title;
+    this.movieService.paramsForSearch.year = year
+    this.movieService.paramsForSearch.title = title
+    this.movieService.getMovieList()
   }
 }

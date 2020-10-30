@@ -5,15 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-
-  public filteredList: any
-
-  getFilteredList(list){
-    this.filteredList = list
-  }
-
-  // getFilteredByTitleList(list){
-  //   this.filteredList = list
-  // }
- }
+export class AppComponent { }
