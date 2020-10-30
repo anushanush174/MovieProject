@@ -1,38 +1,38 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
-import { MovieService } from './movie.service';
+import { Component, OnInit } from '@angular/core';
+import { Movie, MovieService } from './movie.service';
 
 @Component({
   selector: 'app-movie-list',
   templateUrl: './movie-list.component.html',
-  styleUrls: ['./movie-list.component.css']
+  styleUrls: ['./movie-list.component.css'],
 })
 export class MovieListComponent implements OnInit {
-  public movieList;
-  public currentPage: number = 1;
+  public movieList: Movie[];
+  public currentPage = 1;
 
-  constructor(private movieServise: MovieService) { }
+  constructor(private movieService: MovieService) {}
 
   ngOnInit(): void {
-    this.movieServise.getMovieList()
+    this.movieService.getMovieList();
     this.getMovies();
   }
 
-  getMovies() {
-    this.movieServise.subject.subscribe(data => {
-      this.movieList = data
-    })
+  getMovies(): void {
+    this.movieService.subject.subscribe((data: Movie[]) => {
+      this.movieService.getRatingAvarage(data);
+      this.movieList = data;
+    });
   }
 
-  previewPage() {
-    this.movieServise.paramsForSearch._page--;
-    this.getMovies();
+  previewPage(): void {
+    if (this.movieService.paramsForSearch._page > 1) {
+      this.movieService.paramsForSearch._page--;
+    }
+    this.movieService.getMovieList();
   }
 
-  nextPage() {
-    this.movieServise.paramsForSearch._page++;
-    this.getMovies();
-    console.log(this.movieServise.paramsForSearch._page++
-    )
+  nextPage(): void {
+    this.movieService.paramsForSearch._page++;
+    this.movieService.getMovieList();
   }
-
 }

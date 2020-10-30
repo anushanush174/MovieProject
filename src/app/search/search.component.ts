@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Subject } from 'rxjs';
-import { MovieService } from '../movie-list/movie.service';;
+import { MovieService } from '../movie-list/movie.service';
 
 @Component({
   selector: 'app-search',
@@ -10,22 +10,22 @@ import { MovieService } from '../movie-list/movie.service';;
 })
 export class SearchComponent implements OnInit {
   public form: FormGroup;
-  subject = new Subject<any>()
-  constructor(private movieService: MovieService) { };
+  subject = new Subject<any>();
+  constructor(private movieService: MovieService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.form = new FormGroup({
       title: new FormControl(''),
       year: new FormControl(''),
-    })
+    });
   }
 
-  onSubmit() {
-    const formData = { ...this.form.value }
-    let year = formData.year;
-    let title = formData.title;
-    this.movieService.paramsForSearch.year = year
-    this.movieService.paramsForSearch.title = title
-    this.movieService.getMovieList()
+  onSubmit(): void {
+    const formData = { ...this.form.value };
+    const year = formData.year;
+    const title = formData.title.toLowerCase();
+    this.movieService.paramsForSearch.year = year;
+    this.movieService.paramsForSearch.title = title;
+    this.movieService.getMovieList();
   }
 }
