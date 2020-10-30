@@ -16,10 +16,6 @@ export class MovieService {
 
     constructor(private http: HttpClient) { }
 
-    getLimitedMovieList() {
-        return this.http.get(this.API_URL)
-    }
-
     getRatingAvarage(list): any {
         list.forEach(movie => {
             movie.rateingAverage = movie.ratings.reduce((a, b) => a + b, 0) / movie.ratings.length;
@@ -30,8 +26,7 @@ export class MovieService {
     getMovieList() {
         let url: string = '?'
         let key = Object.keys(this.paramsForSearch) // ["_page", "_limit", "year", "title"]
-        key.forEach(key => {
-            // console.log(key)
+        key.forEach(key => { // console.log(key)  _page ...
             if (this.paramsForSearch[key]) {
                 url = url + key + '=' + this.paramsForSearch[key] + '&'
             }
@@ -41,7 +36,4 @@ export class MovieService {
         });
     };
 
-    // getFilteredList() {
-    //     return this.http.get(this.API_URL)
-    // }
 }

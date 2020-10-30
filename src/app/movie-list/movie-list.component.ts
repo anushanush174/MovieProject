@@ -13,14 +13,14 @@ export class MovieListComponent implements OnInit {
   constructor(private movieServise: MovieService) { }
 
   ngOnInit(): void {
-    this.getMovies();
     this.movieServise.getMovieList()
+    this.getMovies();
   }
 
   getMovies() {
-    this.movieServise.getLimitedMovieList().subscribe(data => {
-      this.movieList = this.movieServise.getRatingAvarage(data)
-    });
+    this.movieServise.subject.subscribe(data => {
+      this.movieList = data
+    })
   }
 
   previewPage() {
