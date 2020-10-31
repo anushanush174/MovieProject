@@ -18,6 +18,7 @@ export class MovieService {
   private API_URL = environment.API_URL;
   subject = new Subject<any>();
   paramsForSearch = {
+    genres: '',
     _page: 1,
     _limit: 10,
     year: '',

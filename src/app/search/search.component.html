@@ -1,21 +1,46 @@
 <div class="botton">
-    <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <div class="first">
-            <label for="title"></label>
-            <input id="title" type="text" placeholder="Film Title" formControlName="title">
-        </div>
-        <div class="second">
-            <label for="year"></label>
-            <input id="year" type="number" placeholder="Film Year" formControlName="year">
-        </div>
-        <div class="third">
-            <label for="genre"></label>
-            <input id="genre" type="text" placeholder="Film Genre">
-        </div>
-        <br>
-        <div>
-            <button class="search-button" type="submit"> Search </button>
-
-        </div>
-    </form>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="first">
+      <label for="title">
+        <input
+          id="title"
+          type="text"
+          placeholder="Film Title"
+          formControlName="title"
+        />
+      </label>
+    </div>
+    <div class="second">
+      <label for="year">
+        <input
+          id="year"
+          type="number"
+          placeholder="Film Year"
+          formControlName="year"
+        />
+      </label>
+    </div>
+    <div class="third">
+      <label for="genres">
+        <select name="genres" id="genres" formControlName="genres">
+          <option value="Action">Action</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Crime">Crime</option>
+          <option value="Adventure">Adventure</option>
+          <option value="Drama">Drama</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Horror">Horror</option>
+          <option value="Romance">Romance</option>
+          <option value="Documentary">Documentary</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Western">Western</option>
+          <option value="Mystery">Mystery</option>
+        </select>
+      </label>
+    </div>
+    <br />
+    <div>
+      <button class="search-button" type="submit">Search</button>
+    </div>
+  </form>
 </div>

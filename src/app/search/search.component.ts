@@ -17,6 +17,7 @@ export class SearchComponent implements OnInit {
     this.form = new FormGroup({
       title: new FormControl(''),
       year: new FormControl(''),
+      genres: new FormControl(''),
     });
   }
 
@@ -24,8 +25,11 @@ export class SearchComponent implements OnInit {
     const formData = { ...this.form.value };
     const year = formData.year;
     const title = formData.title;
+    const genres = formData.genres;
     this.movieService.paramsForSearch.year = year;
     this.movieService.paramsForSearch.title = title;
+    this.movieService.paramsForSearch.genres = genres;
+    console.log(genres);
     this.movieService.getMovieList();
   }
 }
