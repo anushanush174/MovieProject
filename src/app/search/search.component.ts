@@ -29,7 +29,6 @@ export class SearchComponent implements OnInit {
     this.movieService.paramsForSearch.year = year;
     this.movieService.paramsForSearch.title = title;
     this.movieService.paramsForSearch.genres = genres;
-    console.log(genres);
     this.movieService.getMovieList();
   }
 }
