@@ -6,12 +6,12 @@ import { MovieService } from '../movie-list/movie.service';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  styleUrls: ['./search.component.css'],
 })
 export class SearchComponent implements OnInit {
   public form: FormGroup;
   subject = new Subject<any>();
-  constructor(private movieService: MovieService) { }
+  constructor(private movieService: MovieService) {}
 
   ngOnInit(): void {
     this.form = new FormGroup({
@@ -30,10 +30,9 @@ export class SearchComponent implements OnInit {
     this.movieService.paramsForSearch.title = this.toTitleCase(title);
     this.movieService.paramsForSearch.genres_like = genres;
     this.movieService.getMovieList();
-    console.log(this.toTitleCase(title));
   }
 
-  toTitleCase(str) {
+  toTitleCase(str): string {
     str = str.toLowerCase().split(' ');
     for (let i = 0; i < str.length; i++) {
       str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
