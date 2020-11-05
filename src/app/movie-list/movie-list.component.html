@@ -4,6 +4,12 @@
             <img src="{{movie.posterurl}}" class="img-class">
         </div>
         <div>
+            <app-delete-movie  [movieId]="movie.id"></app-delete-movie>
+        </div>
+        <div>
+            <app-update-movie></app-update-movie>
+        </div>
+        <div>
             <span>
                 <h1 class="title">{{movie.title}}</h1>
                 <h2 class="year">({{movie.year}})</h2>

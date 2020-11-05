@@ -11,12 +11,14 @@ export interface Movie {
   duration: number;
   rating: number;
   storyline: string;
+  id: number;
 }
 
 @Injectable()
 export class MovieService {
   private API_URL = environment.API_URL;
-  subject = new Subject<any>();
+  public subject = new Subject<any>();
+  // private id: number;
   paramsForSearch = {
     genres_like: '',
     _page: 1,
@@ -38,13 +40,21 @@ export class MovieService {
   getMovieList(): void {
     let url = '?';
     const keys = Object.keys(this.paramsForSearch); // ["_page", "_limit", "year", "title"]
-    keys.forEach((key) => { // console.log(key)  _page ...
+    keys.forEach((key) => {
+      // console.log(key)  _page ...
       if (this.paramsForSearch[key]) {
         url = url + key + '=' + this.paramsForSearch[key] + '&';
       }
     });
-    this.http.get(this.API_URL + url).subscribe( movies => {
+    this.http.get(this.API_URL + url).subscribe((movies) => {
       this.subject.next(movies);
     });
   }
+
+  deleteMovie(id): any {
+    this.http.delete<void>(this.API_URL + `/${id}`)
+      .subscribe();
+    this.getMovieList();
+  }
+  
 }
