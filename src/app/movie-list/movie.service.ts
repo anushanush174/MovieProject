@@ -18,7 +18,7 @@ export interface Movie {
 export class MovieService {
   private API_URL = environment.API_URL;
   public subject = new Subject<any>();
-  // private id: number;
+
   paramsForSearch = {
     genres_like: '',
     _page: 1,
@@ -51,10 +51,19 @@ export class MovieService {
     });
   }
 
-  deleteMovie(id): any {
-    this.http.delete<void>(this.API_URL + `/${id}`)
-      .subscribe();
-    this.getMovieList();
+  deleteMovie(id: number): any {
+    return this.http.delete<void>(this.API_URL + `/${id}`);
   }
 
+  createNewMovie(): any{
+    const newMovie = {
+      title: '',
+      year: '',
+      genres: '',
+      actors: '',
+      duration: '',
+      description: '',
+    };
+    return this.http.post<Movie>(this.API_URL, newMovie);
+  }
 }
