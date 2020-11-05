@@ -13,8 +13,7 @@ export class DeleteMovieComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  deleteCurrentMovie(){
+  deleteCurrentMovie(): any{
     this.movieService.deleteMovie(this.movieId);
-    this.movieService.getMovieList()
   }
 }

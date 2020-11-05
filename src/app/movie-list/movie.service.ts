@@ -56,5 +56,5 @@ export class MovieService {
       .subscribe();
     this.getMovieList();
   }
-  
+
 }
