@@ -10,6 +10,8 @@ import { CreateMovieComponent } from './create-movie/create-movie.component';
 import { DeleteMovieComponent } from './delete-movie/delete-movie.component';
 import { UpdateMovieComponent } from './update-movie/update-movie.component';
 import { SearchComponent } from './search/search.component';
+import { ShowModalComponent } from './show-modal/show-modal.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,15 @@ import { SearchComponent } from './search/search.component';
     SearchComponent,
     CreateMovieComponent,
     DeleteMovieComponent,
-    UpdateMovieComponent
+    UpdateMovieComponent,
+    ShowModalComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    AppRoutingModule,
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]
