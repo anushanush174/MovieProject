@@ -1,3 +1,7 @@
+<app-search></app-search>
+<div>
+    <button class="add-button" [routerLink]="['/add-movie']">Add Movie</button>
+</div>
 <div>
     <div *ngFor="let movie of movieList" class="movie-list">
         <div class="img-conteiner">
@@ -30,5 +34,4 @@
         <button (click)="previewPage()">Preview</button>
         <button (click)="nextPage()">Next</button>
     </div>
-    <router-outlet></router-outlet>
 </div>
