@@ -1,12 +1,10 @@
-<div class="add-new-movie">
-    <form>
-        <label for="">
-            <input type="Text" placeholder="Title"> <br>
-        </label>
-        <label for=""> <input type="number" placeholder="Year"></label><br>
-        <label for=""> <input type="text" placeholder="Actors"><br></label>
-        <label for=""> <input type="text" placeholder="Duration"><br></label>
-        <label for=""> <input type="number" placeholder="Raiting from 1 to 10"><br></label>
+<div class="add-new-movie" [formGroup]="createForm">
+    <form >
+        <label for=""><input type="Text"formControlName="title" placeholder="Title"> <br> </label>
+        <label for=""> <input type="number" formControlName="year" placeholder="Year"></label><br>
+        <label for=""> <input type="text" formControlName="actors" placeholder="Actors"><br></label>
+        <label for=""> <input type="text" formControlName="duration" placeholder="Duration"><br></label>
+        <label for=""> <input type="number" formControlName="raiting" placeholder="Raiting from 1 to 10"><br></label>
         <label for=""> <select name="genres" id="genres" formControlName="genres">
                 <option value="Action">Action</option>
                 <option value="Adventure">Adventure</option>
@@ -22,7 +20,7 @@
                 <option value="Western">Western</option>
             </select><br>
         </label>
-        <textarea rows="4" cols="50" name="comment" form="usrform"
+        <textarea rows="4" cols="50" name="description" form="usrform" formControlName="description"
             placeholder="Enter description here..."> My Movie Description </textarea>
 
         <div>
