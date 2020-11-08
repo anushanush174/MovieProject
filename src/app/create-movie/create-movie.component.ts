@@ -8,11 +8,11 @@ import { MovieService } from '../movie-list/movie.service';
   styleUrls: ['./create-movie.component.css']
 })
 export class CreateMovieComponent implements OnInit {
-  public createForm: FormGroup;
+  public createMovieForm: FormGroup;
   constructor(private movieService: MovieService) { }
 
   ngOnInit(): void {
-    this.createForm = new FormGroup({
+    this.createMovieForm = new FormGroup({
       title: new FormControl(''),
       year: new FormControl(''),
       actors: new FormControl(''),
@@ -20,10 +20,15 @@ export class CreateMovieComponent implements OnInit {
       raiting: new FormControl(''),
       genres: new FormControl(''),
       description: new FormControl(''),
-    })
+    });
   }
 
-  createMovie(): void {
-    console.log();
+  onClick(): void {
+    const formData = { ...this.createMovieForm.value };
+    console.log(formData);
+    this.movieService.createNewMovie(formData).subscribe(() => {
+      this.movieService.getMovieList();
+    });
   }
+
 }

@@ -9,9 +9,10 @@ export interface Movie {
   genres: string;
   actors: string;
   duration: number;
-  rating: number;
+  rating?: number;
   storyline: string;
-  id: number;
+  id?: number;
+  posterurl?: string;
 }
 
 @Injectable()
@@ -54,15 +55,8 @@ export class MovieService {
     return this.http.delete<void>(this.API_URL + `/${id}`);
   }
 
-  createNewMovie(): any{
-    const newMovie = {
-      title: '',
-      year: '',
-      genres: '',
-      actors: '',
-      duration: '',
-      description: '',
-    };
-    return this.http.post<Movie>(this.API_URL, newMovie);
+  createNewMovie(movie: Movie): any{
+    return this.http.post<Movie>(this.API_URL, movie);
   }
+
 }

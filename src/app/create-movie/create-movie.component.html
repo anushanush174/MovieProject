@@ -1,31 +1,54 @@
-<div class="add-new-movie" [formGroup]="createForm">
-    <form >
-        <label for=""><input type="Text"formControlName="title" placeholder="Title"> <br> </label>
-        <label for=""> <input type="number" formControlName="year" placeholder="Year"></label><br>
-        <label for=""> <input type="text" formControlName="actors" placeholder="Actors"><br></label>
-        <label for=""> <input type="text" formControlName="duration" placeholder="Duration"><br></label>
-        <label for=""> <input type="number" formControlName="raiting" placeholder="Raiting from 1 to 10"><br></label>
-        <label for=""> <select name="genres" id="genres" formControlName="genres">
-                <option value="Action">Action</option>
-                <option value="Adventure">Adventure</option>
-                <option value="Crime">Crime</option>
-                <option value="Comedy">Comedy</option>
-                <option value="Drama">Drama</option>
-                <option value="Documentary">Documentary</option>
-                <option value="Fantasy">Fantasy</option>
-                <option value="Horror">Horror</option>
-                <option value="Mystery">Mystery</option>
-                <option value="Romance">Romance</option>
-                <option value="Thriller">Thriller</option>
-                <option value="Western">Western</option>
-            </select><br>
-        </label>
-        <textarea rows="4" cols="50" name="description" form="usrform" formControlName="description"
-            placeholder="Enter description here..."> My Movie Description </textarea>
+<div class="add-new-movie" >
+  <form  [formGroup]="createMovieForm">
+    <label for="">
+      <input type="Text" formControlName="title" placeholder="Title" /> <br />
+    </label>
+    <label for="">
+      <input type="number" formControlName="year" placeholder="Year" /> </label
+    ><br />
+    <label for="">
+      <input type="text" formControlName="actors" placeholder="Actors" /> <br
+    /></label>
+    <label for="">
+      <input type="text" formControlName="duration" placeholder="Duration" />
+      <br
+    /></label>
+    <!-- <label for="">
+      <input
+        type="number"
+        formControlName="raiting"
+        placeholder="Raiting from 1 to 10" /><br
+    /></label> -->
+    <label for="">
+      <select name="genres" id="genres" formControlName="genres">
+        <option value="Action">Action</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Crime">Crime</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Drama">Drama</option>
+        <option value="Documentary">Documentary</option>
+        <option value="Fantasy">Fantasy</option>
+        <option value="Horror">Horror</option>
+        <option value="Mystery">Mystery</option>
+        <option value="Romance">Romance</option>
+        <option value="Thriller">Thriller</option>
+        <option value="Western">Western</option></select
+      ><br />
+    </label>
+    <textarea
+      rows="4"
+      cols="50"
+      name="description"
+      form="usrform"
+      formControlName="description"
+      placeholder="Enter description here..."
+    >
+ My Movie Description </textarea
+    >
 
-        <div>
-            <button [routerLink]="['/']"> Cancel </button> 
-            <button> Add </button>
-        </div>
-    </form>
+    <div>
+      <button [routerLink]="['/']">Cancel</button>
+      <button type="submit" (click)="onClick()">Add</button>
+    </div>
+  </form>
 </div>
