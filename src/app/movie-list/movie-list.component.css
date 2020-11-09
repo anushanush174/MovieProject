@@ -61,3 +61,11 @@ button {
     float: right;
     padding: 20px;
 }
+
+.add-button{
+    background-color: #4CAF50;
+}
+
+.edit-btn{
+    background-color: #008CBA
+  }

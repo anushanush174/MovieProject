@@ -13,7 +13,7 @@
         </div>
 
         <div class="btn-div">
-            <app-update-movie></app-update-movie>
+            <button class="edit-btn" [routerLink]="['/edit-movie']"> Edit </button>
         </div>
 
         <div>
@@ -21,10 +21,10 @@
                 <h1 class="title">{{movie.title}}</h1>
                 <h2 class="year">({{movie.year}})</h2>
                 <div>
-                    <small> <strong>Genre:</strong> {{movie.genres}}</small> <br>
-                    <small> <strong>Actors:</strong> {{movie.actors}}</small> <br>
-                    <small> <strong>Duration:</strong> {{movie.duration}}</small> <br>
-                    <small> <strong>Raiting:</strong> {{movie.rateingAverage | number:'1.1-2'}} from 10 </small>
+                    <small><strong>Genre:</strong> {{movie.genres}}</small> <br>
+                    <small><strong>Actors:</strong> {{movie.actors}}</small> <br>
+                    <small><strong>Duration:</strong> {{movie.duration}}</small> <br>
+                    <small><strong>Raiting:</strong> {{movie.rateingAverage | number:'1.1-2'}} from 10 </small>
                 </div>
                 <div class="description">
                     <h4>Description</h4>
