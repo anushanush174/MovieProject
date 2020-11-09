@@ -32,8 +32,10 @@ export class MovieService {
 
   getRatingAvarage(list): any {
     list.forEach((movie) => {
-      movie.rateingAverage =
-        movie.ratings.reduce((a, b) => a + b, 0) / movie.ratings.length;
+      if(movie.rateingAverage){
+        movie.rateingAverage = movie.ratings.reduce((a, b) => a + b, 0) / movie.ratings.length;
+      }
+      
     });
     return list;
   }

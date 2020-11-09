@@ -1,60 +1,6 @@
 {
   "movies": [
     {
-      "id": "3",
-      "title": "Hannah",
-      "year": "2017",
-      "genres": [
-        "Drama"
-      ],
-      "ratings": [
-        1,
-        10,
-        4,
-        9,
-        10,
-        1,
-        9,
-        3,
-        4,
-        4,
-        3,
-        2,
-        3,
-        3,
-        1,
-        1,
-        6,
-        7,
-        10,
-        7,
-        7,
-        8,
-        1,
-        3,
-        10,
-        3,
-        1,
-        9,
-        7,
-        3
-      ],
-      "poster": "MV5BNWJmMWIxMjQtZTk0Mi00YTE0LTkyNzAtYzQxYjcwYjE4ZDk2XkEyXkFqcGdeQXVyMTc4MzI2NQ@@._V1_SY500_SX350_AL_.jpg",
-      "contentRating": "",
-      "duration": "PT95M",
-      "releaseDate": "2018-01-24",
-      "averageRating": 0,
-      "originalTitle": "",
-      "storyline": "Intimate portrait of a woman drifting between reality and denial when she is left alone to grapple with the consequences of her husband's imprisonment.",
-      "actors": [
-        "Charlotte Rampling",
-        "André Wilms",
-        "Stéphanie Van Vyve"
-      ],
-      "imdbRating": 6.5,
-      "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNWJmMWIxMjQtZTk0Mi00YTE0LTkyNzAtYzQxYjcwYjE4ZDk2XkEyXkFqcGdeQXVyMTc4MzI2NQ@@._V1_SY500_SX350_AL_.jpg"
-    },
-    {
       "id": "6",
       "title": "The Chamber",
       "year": "2016",
@@ -437,61 +383,6 @@
       ],
       "imdbRating": 6.8,
       "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMzg3Y2MyNjgtMzk4ZS00OTU3LWEwZmMtN2Y0NTdlZjU0NGFiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY500_CR0,0,337,500_AL_.jpg"
-    },
-    {
-      "id": "19",
-      "title": "Thoroughbreds",
-      "year": "2017",
-      "genres": [
-        "Drama",
-        "Thriller"
-      ],
-      "ratings": [
-        7,
-        9,
-        2,
-        9,
-        2,
-        10,
-        5,
-        5,
-        8,
-        3,
-        2,
-        6,
-        6,
-        2,
-        6,
-        1,
-        6,
-        6,
-        2,
-        7,
-        1,
-        6,
-        10,
-        10,
-        10,
-        8,
-        9,
-        4,
-        7,
-        5
-      ],
-      "poster": "MV5BMTk4MzQ1NDY2OF5BMl5BanBnXkFtZTgwNjA4Nzc4MzI@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "contentRating": "",
-      "duration": "PT92M",
-      "releaseDate": "2018-03-09",
-      "averageRating": 0,
-      "originalTitle": "",
-      "storyline": "Two upper-class teenage girls in suburban Connecticut rekindle their unlikely friendship after years of growing apart. Together, they hatch a plan to solve both of their problems-no matter what the cost.",
-      "actors": [
-        "Anya Taylor-Joy",
-        "Olivia Cooke",
-        "Paul Sparks"
-      ],
-      "imdbRating": 7,
-      "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTk4MzQ1NDY2OF5BMl5BanBnXkFtZTgwNjA4Nzc4MzI@._V1_SY500_CR0,0,337,500_AL_.jpg"
     },
     {
       "id": "20",
@@ -33802,193 +33693,33 @@
     },
     {
       "title": "",
-      "year": null,
-      "genres": "",
+      "year": "",
       "actors": "",
-      "duration": null,
-      "storyline": "",
-      "id": "ZWp_4k3"
-    },
-    {
-      "title": "aaa",
-      "year": null,
+      "duration": "",
+      "raiting": "",
       "genres": "",
-      "actors": "",
-      "duration": null,
-      "storyline": "",
-      "id": "LhQN4-J"
+      "description": "",
+      "id": "GtBDmbM"
     },
     {
       "title": "",
-      "year": null,
-      "genres": "",
+      "year": "",
       "actors": "",
-      "duration": null,
-      "storyline": "",
-      "id": "IM4_g_j"
+      "duration": "",
+      "raiting": "",
+      "genres": "",
+      "description": "",
+      "id": "o1CzyZU"
     },
     {
-      "id": "V5Fadh3"
-    },
-    {
-      "title": "9",
-      "year": 9,
+      "title": "",
+      "year": "",
       "actors": "",
-      "duration": "9",
+      "duration": "",
       "raiting": "",
       "genres": "",
-      "description": "55",
-      "id": "6wdip0o"
-    },
-    {
-      "title": "9",
-      "year": 9,
-      "actors": "",
-      "duration": "9",
-      "raiting": "",
-      "genres": "",
-      "description": "55",
-      "id": "Z4xUiqV"
-    },
-    {
-      "title": "8",
-      "year": 8,
-      "actors": "8",
-      "duration": "8",
-      "raiting": "",
-      "genres": "",
-      "description": "8",
-      "id": "z1_5sMk"
-    },
-    {
-      "title": "9",
-      "year": 9,
-      "actors": "999",
-      "duration": "9",
-      "raiting": "",
-      "genres": "",
-      "description": "99",
-      "id": "Re-MDKT"
-    },
-    {
-      "title": "9",
-      "year": 9,
-      "actors": "999",
-      "duration": "9",
-      "raiting": "",
-      "genres": "",
-      "description": "99",
-      "id": "0C-2RG9"
-    },
-    {
-      "title": "9",
-      "year": 9,
-      "actors": "999",
-      "duration": "9",
-      "raiting": "",
-      "genres": "",
-      "description": "99",
-      "id": "0ke5KXa"
-    },
-    {
-      "title": "9",
-      "year": 9,
-      "actors": "999",
-      "duration": "9",
-      "raiting": "",
-      "genres": "",
-      "description": "99",
-      "id": "n7Dh9CE"
-    },
-    {
-      "title": "9",
-      "year": 9,
-      "actors": "999",
-      "duration": "9",
-      "raiting": "",
-      "genres": "",
-      "description": "99",
-      "id": "lqMUwWm"
-    },
-    {
-      "title": "7",
-      "year": 7,
-      "actors": "7",
-      "duration": "7",
-      "raiting": "",
-      "genres": "",
-      "description": "77",
-      "id": "Iwdt79z"
-    },
-    {
-      "title": "7",
-      "year": 7,
-      "actors": "7",
-      "duration": "7",
-      "raiting": "",
-      "genres": "",
-      "description": "77",
-      "id": "jRq2R3K"
-    },
-    {
-      "title": "9",
-      "year": 9,
-      "actors": "9",
-      "duration": "9",
-      "raiting": "",
-      "genres": "",
-      "description": "9",
-      "id": "V6R3A6c"
-    },
-    {
-      "title": "9",
-      "year": 9,
-      "actors": "9",
-      "duration": "9",
-      "raiting": "",
-      "genres": "",
-      "description": "9",
-      "id": "F3vmeT5"
-    },
-    {
-      "title": "9",
-      "year": 9,
-      "actors": "9",
-      "duration": "9",
-      "raiting": "",
-      "genres": "",
-      "description": "9",
-      "id": "JFIFw4Y"
-    },
-    {
-      "title": "9",
-      "year": 9,
-      "actors": "9",
-      "duration": "9",
-      "raiting": "",
-      "genres": "",
-      "description": "9",
-      "id": "lBc0tRG"
-    },
-    {
-      "title": "9",
-      "year": 9,
-      "actors": "9",
-      "duration": "9",
-      "raiting": "",
-      "genres": "Action",
-      "description": "777",
-      "id": "qdOC3tC"
-    },
-    {
-      "title": "99",
-      "year": 999,
-      "actors": "9999",
-      "duration": "9999",
-      "raiting": "",
-      "genres": "Action",
-      "description": "9999999999999999999999999999999999999999999999999999999999999999",
-      "id": "OcyUPb2"
+      "description": "",
+      "id": "ra9bDux"
     }
   ]
 }

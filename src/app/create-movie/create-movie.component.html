@@ -1,16 +1,17 @@
+<p [routerLink]="['/']">To Home Page</p>
 <div class="add-new-movie" >
   <form  [formGroup]="createMovieForm">
     <label for="">
-      <input type="Text" formControlName="title" placeholder="Title" /> <br />
+      <input class="center-block" type="text" formControlName="title" placeholder="Title" /> <br />
     </label>
     <label for="">
-      <input type="number" formControlName="year" placeholder="Year" /> </label
+      <input class="center-block"type="text" formControlName="year" placeholder="Year" /> </label
     ><br />
     <label for="">
-      <input type="text" formControlName="actors" placeholder="Actors" /> <br
+      <input class="center-block" type="text" formControlName="actors" placeholder="Actors" /> <br
     /></label>
     <label for="">
-      <input type="text" formControlName="duration" placeholder="Duration" />
+      <input class="center-block" type="text" formControlName="duration" placeholder="Duration" />
       <br
     /></label>
     <!-- <label for="">
@@ -20,7 +21,7 @@
         placeholder="Raiting from 1 to 10" /><br
     /></label> -->
     <label for="">
-      <select name="genres" id="genres" formControlName="genres">
+      <select  class="center-block" name="genres" id="genres" formControlName="genres">
         <option value="Action">Action</option>
         <option value="Adventure">Adventure</option>
         <option value="Crime">Crime</option>
@@ -47,8 +48,8 @@
     >
 
     <div>
-      <button [routerLink]="['/']">Cancel</button>
-      <button type="submit" (click)="onClick()">Add</button>
+      <button class="btn" [routerLink]="['/']">Cancel</button>
+      <button class="btn" type="submit" (click)="onClick()">Add</button>
     </div>
   </form>
 </div>

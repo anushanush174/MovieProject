@@ -2,27 +2,17 @@
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <div class="first">
       <label for="title">
-        <input
-          id="title"
-          type="text"
-          placeholder="Film Title"
-          formControlName="title"
-        />
+        <input class="center-block" id="title" type="text" placeholder="Film Title" formControlName="title" />
       </label>
     </div>
     <div class="second">
       <label for="year">
-        <input
-          id="year"
-          type="number"
-          placeholder="Film Year"
-          formControlName="year"
-        />
+        <input class="center-block" id="year" type="text" placeholder="Film Year" formControlName="year" />
       </label>
     </div>
     <div class="third">
       <label for="genres">
-        <select name="genres" id="genres" formControlName="genres">
+        <select class="center-block" name="genres" id="genres" formControlName="genres">
           <option value=""> </option>
           <option value="Action">Action</option>
           <option value="Comedy">Comedy</option>

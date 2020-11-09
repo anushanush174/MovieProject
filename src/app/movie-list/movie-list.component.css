@@ -36,6 +36,28 @@
     text-align: justify;
 }
 
-.add-button{
-    left: 90%;
+button {
+    width: 100px; 
+    margin: 0 auto;
+    display: block;
+    float: right;
+  }
+
+.btn{
+    margin-right: 560px;
+    padding: 14px 40px
+}
+
+.btns{
+    margin: 15px;
+    margin-bottom: 15px;
+}
+
+.list{
+    margin-bottom: 95px;
+}
+
+.btn-div{
+    float: right;
+    padding: 20px;
 }
