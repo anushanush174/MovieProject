@@ -30,7 +30,7 @@ export class CreateMovieComponent implements OnInit {
     this.movieService.createNewMovie(formData).subscribe(() => {
       this.movieService.getMovieList();
     });
-    this.router.navigate(['/'])
+    this.router.navigate(['/']);
   }
 
 }
