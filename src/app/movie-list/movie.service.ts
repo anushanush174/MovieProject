@@ -20,7 +20,7 @@ export class MovieService {
   private API_URL = environment.API_URL;
   public subject = new Subject<any>();
 
-  paramsForSearch = {
+  public paramsForSearch = {
     genres_like: '',
     _page: 1,
     _limit: 10,
@@ -59,6 +59,10 @@ export class MovieService {
 
   createNewMovie(movie: Movie): any{
     return this.http.post<Movie>(this.API_URL, movie);
+  }
+
+  putMovie(id: number): any{
+    return this.http.put<Movie>(this.API_URL, + `/${id}`)
   }
 
 }

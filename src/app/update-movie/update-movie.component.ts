@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { MovieService } from '../movie-list/movie.service';
 
 @Component({
   selector: 'app-update-movie',
@@ -8,7 +9,8 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class UpdateMovieComponent implements OnInit {
   public editMovieForm: FormGroup;
-  constructor() { }
+  @Input() movieID: number;
+  constructor(private movieService: MovieService) { }
 
   ngOnInit(): void {
     this.editMovieForm = new FormGroup( {
@@ -22,7 +24,8 @@ export class UpdateMovieComponent implements OnInit {
     });
   }
 
-  onClick(): void {
+  onEdit(): void {
+    console.log(this.movieID)
     const formData = { ...this.editMovieForm.value };
   }
 
