@@ -25,8 +25,9 @@ export class UpdateMovieComponent implements OnInit {
   }
 
   onEdit(): void {
-    console.log(this.movieID)
+    console.log(this.movieID);
     const formData = { ...this.editMovieForm.value };
+    console.log(this.movieService.putMovie(6));
   }
 
 }

@@ -32,10 +32,9 @@ export class MovieService {
 
   getRatingAvarage(list): any {
     list.forEach((movie) => {
-      if(movie.rateingAverage){
+      if (movie.rateingAverage){
         movie.rateingAverage = movie.ratings.reduce((a, b) => a + b, 0) / movie.ratings.length;
       }
-      
     });
     return list;
   }
@@ -62,7 +61,7 @@ export class MovieService {
   }
 
   putMovie(id: number): any{
-    return this.http.put<Movie>(this.API_URL, + `/${id}`)
+    return this.http.put<Movie>(this.API_URL, + `/${id}`);
   }
 
 }
