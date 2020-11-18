@@ -10,7 +10,7 @@ import { UpdateMovieComponent } from './update-movie/update-movie.component';
 const routes: Routes = [
     {path: '', component: MovieListComponent},
     {path: 'add-movie', component: CreateMovieComponent},
-    {path: 'edit-movie', component: UpdateMovieComponent},
+    {path: 'edit-movie/:id', component: UpdateMovieComponent},
 
 ];
 

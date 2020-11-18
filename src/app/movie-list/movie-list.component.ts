@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Movie, MovieService } from './movie.service';
 
 @Component({
@@ -13,7 +12,6 @@ export class MovieListComponent implements OnInit {
 
   constructor(
     private movieService: MovieService,
-    private router: Router
     ) {}
 
   ngOnInit(): void {
@@ -38,10 +36,6 @@ export class MovieListComponent implements OnInit {
   nextPage(): void {
     this.movieService.paramsForSearch._page++;
     this.movieService.getMovieList();
-  }
-
-  routeToEditPage(): void{
-    this.router.navigate(['/edit-movie']);
   }
 
 }
