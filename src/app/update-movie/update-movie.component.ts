@@ -24,9 +24,17 @@ export class UpdateMovieComponent implements OnInit {
   }
 
   onEdit(): void {
-    const formData = { ...this.editMovieForm.value };
-
-    this.movieService.getMovieList();
+    // const formData = { ...this.editMovieForm.value };
+    // this.editMovieForm.setValue({
+    //   title: formData.title,
+    //   year: new FormControl(''),
+    //   actors: new FormControl(''),
+    //   duration: new FormControl(''),
+    //   raiting: new FormControl(''),
+    //   genres: new FormControl(''),
+    //   description: new FormControl(''),
+    // });
+    // console.log(formData);
   }
 
 }
