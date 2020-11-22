@@ -1,61 +1,6 @@
 {
   "movies": [
     {
-      "id": "6",
-      "title": "The Chamber",
-      "year": "2016",
-      "genres": [
-        "Horror",
-        "Thriller"
-      ],
-      "ratings": [
-        2,
-        10,
-        7,
-        10,
-        9,
-        9,
-        7,
-        4,
-        6,
-        2,
-        1,
-        10,
-        9,
-        4,
-        6,
-        8,
-        3,
-        5,
-        1,
-        1,
-        1,
-        5,
-        6,
-        9,
-        5,
-        4,
-        8,
-        8,
-        8,
-        8
-      ],
-      "poster": "MV5BNTVlODgwMjgtZGUzMy00ZTY1LWIyMDEtYTI2Y2JlYzVjZTNkXkEyXkFqcGdeQXVyNTg0MDM1MzY@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "contentRating": "",
-      "duration": "PT88M",
-      "releaseDate": "2017-03-10",
-      "averageRating": 0,
-      "originalTitle": "",
-      "storyline": "A claustrophobic survival thriller set beneath the Yellow Sea off the coast of North Korea where the pilot of a small submersible craft and a three man Special Ops team on a secret recovery mission become trapped underwater in a fight for survival.",
-      "actors": [
-        "Johannes Kuhnke",
-        "Charlotte Salt",
-        "James McArdle"
-      ],
-      "imdbRating": 4.4,
-      "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNTVlODgwMjgtZGUzMy00ZTY1LWIyMDEtYTI2Y2JlYzVjZTNkXkEyXkFqcGdeQXVyNTg0MDM1MzY@._V1_SY500_CR0,0,337,500_AL_.jpg"
-    },
-    {
       "id": "8",
       "title": "Red Sparrow",
       "year": "2018",
