@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
 import { MovieService } from '../movie-list/movie.service';
 
 @Component({
@@ -30,6 +29,7 @@ export class UpdateMovieComponent implements OnInit {
         duration: movie.duration,
         genres: '',
         storyline: movie.storyline,
+        posterUrl: this.editMovieForm.value.posterUrl
       });
     });
   }
@@ -46,9 +46,8 @@ export class UpdateMovieComponent implements OnInit {
   }
 
   onEdit(): void {
-    this.movieService
-      .putEditedMovie(this.id, this.editMovieForm)
-      .subscribe(() => {
+    this.movieService.putEditedMovie(this.id, this.editMovieForm.value).subscribe(() => {
+        console.log(this.editMovieForm.value);
         return this.movieService.getMovieList();
       });
     this.router.navigate(['/']);

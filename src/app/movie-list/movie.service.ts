@@ -43,8 +43,7 @@ export class MovieService {
   getMovieList(): void {
     let url = '?';
     const keys = Object.keys(this.paramsForSearch); // ["_page", "_limit", "year", "title"]
-    keys.forEach((key) => {
-      // console.log(key)  _page ...
+    keys.forEach((key) => { // console.log(key)  _page ...
       if (this.paramsForSearch[key]) {
         url = url + key + '=' + this.paramsForSearch[key] + '&';
       }
@@ -66,7 +65,7 @@ export class MovieService {
     return this.http.get<void>(this.API_URL + `/${id}`);
   }
 
-  putEditedMovie(id: number, movie): any {
+  putEditedMovie(id: number, movie: Movie): any {
     return this.http.put<Movie>(this.API_URL + `/${id}`, movie);
   }
 }

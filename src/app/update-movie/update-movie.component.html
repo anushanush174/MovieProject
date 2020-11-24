@@ -6,7 +6,7 @@
             <br />
         </label>
         <label for="">
-            <input class="center-block" type="text" formControlName="year" placeholder="Year" /> </label><br />
+            <input class="center-block" type="text" formControlName="year" placeholder="Year" /> </label><br/>
         <label for="">
             <input class="center-block" type="text" formControlName="actors" placeholder="Actors" />
             <br /></label>
@@ -38,7 +38,8 @@
         <textarea rows="4" cols="50" name="storyline" form="usrform" formControlName="storyline"
             placeholder="Enter description here...">
         </textarea>
-
+        <!-- <label for="">
+            <input class="center-block" type="text" formControlName="posterUrl" placeholder="Url" /> </label> -->
         <div>
             <button class="btn" [routerLink]="['/']">Cancel</button>
             <button class="btn" type="submit" (click)="onEdit()">Edit</button>
