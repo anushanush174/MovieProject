@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { Movie, MovieService } from '../movie-list/movie.service';
+import { MovieService } from '../movie-list/movie.service';
 
 @Component({
   selector: 'app-update-movie',
@@ -10,45 +10,47 @@ import { Movie, MovieService } from '../movie-list/movie.service';
   styleUrls: ['./update-movie.component.css'],
 })
 export class UpdateMovieComponent implements OnInit {
-  private routeSub: Subscription;
   public editMovieForm: FormGroup;
+  private id: any;
 
   constructor(
     private movieService: MovieService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
+    this.newFormGroup();
+    this.id = this.route.snapshot.paramMap.get('id');
+    this.movieService.getMovieById(this.id).subscribe((movie) => {
+      this.editMovieForm.setValue({
+        title: movie.title,
+        year: movie.year,
+        actors: movie.actors,
+        duration: movie.duration,
+        genres: '',
+        storyline: movie.storyline,
+      });
+    });
+  }
+
+  private newFormGroup(): void {
     this.editMovieForm = new FormGroup({
       title: new FormControl(''),
       year: new FormControl(''),
       actors: new FormControl(''),
       duration: new FormControl(''),
       genres: new FormControl(''),
-      description: new FormControl(''),
+      storyline: new FormControl(''),
     });
-
-    this.editMovieForm.setValue({
-      title: 'anush',
-      year: '1996',
-      actors: 'melkonyan',
-      duration: '24 tari',
-      genres: '',
-      description: 'My Movie Description',
-    });
-
-    this.routeSub = this.route.params.subscribe((params) => {
-      const id = params.id;
-      this.movieService.subject.subscribe((data: Movie[]) => {
-        this.movieService.getRatingAvarage(data);
-        data.map((currentMovie) => {
-          console.log('currentMovie.id', currentMovie.id);
-        });
-      });
-    });
-
   }
 
-  onEdit(): void {}
-
+  onEdit(): void {
+    this.movieService
+      .putEditedMovie(this.id, this.editMovieForm)
+      .subscribe(() => {
+        return this.movieService.getMovieList();
+      });
+    this.router.navigate(['/']);
+  }
 }
