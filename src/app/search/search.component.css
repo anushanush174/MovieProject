@@ -1,33 +1,33 @@
-.first{
-    width: 800px;
-    display: table-cell;
+.first {
+  width: 800px;
+  display: table-cell;
 }
 
-.second{
-    width: 200px;
-    display: table-cell;
+.second {
+  width: 200px;
+  display: table-cell;
 }
 
-.third{
-    width: 800px;
-    display: table-cell;
+.third {
+  width: 800px;
+  display: table-cell;
 }
 
 div {
-    border-radius: 1px;
-    background-color: #f2f2f2;
-    padding: 20px;
+  border-radius: 1px;
+  background-color: #f2f2f2;
+  padding: 20px;
 }
 
-div{
-    text-align:center;
+div {
+  text-align: center;
 }
 
 .center-block {
-    margin: auto;
-    display: block;
+  margin: auto;
+  display: block;
 }
 
-.search-button{
-    width: 20%;
+.search-button {
+  width: 20%;
 }

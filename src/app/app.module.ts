@@ -21,7 +21,7 @@ import { AppRoutingModule } from './app-routing.module';
     CreateMovieComponent,
     DeleteMovieComponent,
     UpdateMovieComponent,
-    ShowModalComponent
+    ShowModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +31,6 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
   ],
   providers: [MovieService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

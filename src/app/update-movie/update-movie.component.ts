@@ -29,7 +29,7 @@ export class UpdateMovieComponent implements OnInit {
         duration: movie.duration,
         genres: '',
         storyline: movie.storyline,
-        posterUrl: this.editMovieForm.value.posterUrl
+        posterUrl: this.editMovieForm.value.posterUrl,
       });
     });
   }
@@ -46,7 +46,9 @@ export class UpdateMovieComponent implements OnInit {
   }
 
   onEdit(): void {
-    this.movieService.putEditedMovie(this.id, this.editMovieForm.value).subscribe(() => {
+    this.movieService
+      .putEditedMovie(this.id, this.editMovieForm.value)
+      .subscribe(() => {
         console.log(this.editMovieForm.value);
         return this.movieService.getMovieList();
       });

@@ -1,40 +1,45 @@
 <app-search></app-search>
 <div>
-    <button class="add-button" [routerLink]="['/add-movie']">Add Movie</button>
+  <button class="add-button" [routerLink]="['/add-movie']">Add Movie</button>
 </div>
 <div class="list">
-    <div *ngFor="let movie of movieList" class="movie-list">
-        <div class="img-conteiner">
-            <img src="{{movie.posterurl}}" class="img-class">
-        </div>
+  <div *ngFor="let movie of movieList" class="movie-list">
+    <div class="img-conteiner">
+      <img src="{{ movie.posterurl }}" class="img-class" />
+    </div>
 
-        <div class="btn-div">
-            <app-delete-movie [movieId]="movie.id"></app-delete-movie>
-        </div>
+    <div class="btn-div">
+      <app-delete-movie [movieId]="movie.id"></app-delete-movie>
+    </div>
 
-        <div class="btn-div">
-            <button class="edit-btn" [routerLink]="['/edit-movie/', movie.id]"> Edit </button>
-        </div>
+    <div class="btn-div">
+      <button class="edit-btn" [routerLink]="['/edit-movie/', movie.id]">
+        Edit
+      </button>
+    </div>
 
+    <div>
+      <span>
+        <h1 class="title">{{ movie.title }}</h1>
+        <h2 class="year">({{ movie.year }})</h2>
         <div>
-            <span>
-                <h1 class="title">{{movie.title}}</h1>
-                <h2 class="year">({{movie.year}})</h2>
-                <div>
-                    <small><strong>Genre:</strong> {{movie.genres}}</small> <br>
-                    <small><strong>Actors:</strong> {{movie.actors}}</small> <br>
-                    <small><strong>Duration:</strong> {{movie.duration}}</small> <br>
-                    <small><strong>Raiting:</strong> {{movie.rateingAverage | number:'1.1-2'}} from 10 </small>
-                </div>
-                <div class="description">
-                    <h4>Description</h4>
-                    {{movie.storyline}}
-                </div>
-            </span>
+          <small><strong>Genre:</strong> {{ movie.genres }}</small> <br />
+          <small><strong>Actors:</strong> {{ movie.actors }}</small> <br />
+          <small><strong>Duration:</strong> {{ movie.duration }}</small> <br />
+          <small
+            ><strong>Raiting:</strong>
+            {{ movie.rateingAverage | number: "1.1-2" }} from 10
+          </small>
         </div>
+        <div class="description">
+          <h4>Description</h4>
+          {{ movie.storyline }}
+        </div>
+      </span>
     </div>
-    <div class="btns">
-        <button class="btn" (click)="nextPage()">Next</button>
-        <button class="btn" (click)="previewPage()">Preview</button>
-    </div>
+  </div>
+  <div class="btns">
+    <button class="btn" (click)="nextPage()">Next</button>
+    <button class="btn" (click)="previewPage()">Preview</button>
+  </div>
 </div>

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
 import { Movie, MovieService } from './movie.service';
 
 @Component({
@@ -11,9 +10,7 @@ export class MovieListComponent implements OnInit {
   public movieList: Movie[];
   public currentPage = 1;
 
-  constructor(
-    private movieService: MovieService,
-    ) {}
+  constructor(private movieService: MovieService) {}
 
   ngOnInit(): void {
     this.movieService.getMovieList();
@@ -38,5 +35,4 @@ export class MovieListComponent implements OnInit {
     this.movieService.paramsForSearch._page++;
     this.movieService.getMovieList();
   }
-
 }

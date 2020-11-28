@@ -8,17 +8,13 @@ import { UpdateMovieComponent } from './update-movie/update-movie.component';
 // localhost:4200/add-movie -> CreateMovieListComponent
 
 const routes: Routes = [
-    {path: '', component: MovieListComponent},
-    {path: 'add-movie', component: CreateMovieComponent},
-    {path: 'edit-movie/:id', component: UpdateMovieComponent},
-
+  { path: '', component: MovieListComponent },
+  { path: 'add-movie', component: CreateMovieComponent },
+  { path: 'edit-movie/:id', component: UpdateMovieComponent },
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule],
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
-
-export class AppRoutingModule{
-
-}
+export class AppRoutingModule {}

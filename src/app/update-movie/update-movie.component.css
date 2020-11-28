@@ -1,4 +1,4 @@
-.edit-movie{
+.edit-movie {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -7,18 +7,17 @@
   padding: 10px;
 }
 
-
-P { 
+P {
   text-align: center;
   padding: auto;
 }
 
-.center-block {  
+.center-block {
   margin: auto;
   display: block;
 }
 
-.btn{
+.btn {
   float: right;
   margin-right: 60px;
 }
@@ -28,4 +27,3 @@ div {
   background-color: #f2f2f2;
   padding: 20px;
 }
-

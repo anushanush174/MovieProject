@@ -6,11 +6,11 @@ import { MovieService } from '../movie-list/movie.service';
 @Component({
   selector: 'app-create-movie',
   templateUrl: './create-movie.component.html',
-  styleUrls: ['./create-movie.component.css']
+  styleUrls: ['./create-movie.component.css'],
 })
 export class CreateMovieComponent implements OnInit {
   public createMovieForm: FormGroup;
-  constructor(private movieService: MovieService, private router: Router ) { }
+  constructor(private movieService: MovieService, private router: Router) {}
 
   ngOnInit(): void {
     this.createMovieForm = new FormGroup({
@@ -32,5 +32,4 @@ export class CreateMovieComponent implements OnInit {
     });
     this.router.navigate(['/']);
   }
-
 }
