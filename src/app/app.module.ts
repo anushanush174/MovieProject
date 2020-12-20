@@ -12,6 +12,7 @@ import { UpdateMovieComponent } from './update-movie/update-movie.component';
 import { SearchComponent } from './search/search.component';
 import { ShowModalComponent } from './show-modal/show-modal.component';
 import { AppRoutingModule } from './app-routing.module';
+import { LoginPageComponent } from './login/login-page.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { AppRoutingModule } from './app-routing.module';
     DeleteMovieComponent,
     UpdateMovieComponent,
     ShowModalComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,

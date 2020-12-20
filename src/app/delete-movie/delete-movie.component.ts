@@ -4,7 +4,6 @@ import { MovieService } from '../movie-list/movie.service';
 @Component({
   selector: 'app-delete-movie',
   templateUrl: './delete-movie.component.html',
-  styleUrls: ['./delete-movie.component.css'],
 })
 export class DeleteMovieComponent implements OnInit {
   @Input() movieId: number;

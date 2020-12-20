@@ -15,6 +15,15 @@ select {
   border-radius: 4px;
   box-sizing: border-box;
 }
+input[type="password"]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 input[type="submit"] {
   width: 100%;
   background-color: #4caf50;
@@ -36,6 +45,15 @@ input[type="submit"]:hover {
   background-color: #337ab7;
 }
 
+.login-btn{
+  float: right;
+  background-color: rgb(161, 159, 159);
+}
+
+.login-button{
+  text-align: center;
+}
+
 .add-button {
   background-color: #5cb85c;
 }
@@ -52,5 +70,14 @@ input[type="submit"]:hover {
 
 .del-btn {
   background-color: #d9534f;
+}
+
+.forms {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #00000041;
+  padding: 10px;
 }
 
