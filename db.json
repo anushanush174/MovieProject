@@ -32822,5 +32822,12 @@
       "description": "nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuannkaragrutyuannkaragrutyuannkaragrutyuannkaragrutyuannkankaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuannkaragrutyuannkaragrutyuanragrutyuannkaragrutyuannkaragrutyuannkaragrutyuan",
       "id": "tYiOosL"
     }
-  ]
+  ],
+
+  "admin": [
+    {
+    "login": "test", 
+    "password": "12345678"
+    }]
 }
+

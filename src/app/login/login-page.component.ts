@@ -18,6 +18,7 @@ export class LoginPageComponent implements OnInit {
 
     onLogin(): void{
         console.log('logged in');
+
     }
 
 }
