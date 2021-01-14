@@ -1,61 +1,6 @@
 {
   "movies": [
     {
-      "id": "26",
-      "title": "Huntsville",
-      "year": "2017",
-      "genres": [
-        "Drama",
-        "Thriller"
-      ],
-      "ratings": [
-        3,
-        7,
-        1,
-        1,
-        10,
-        10,
-        6,
-        5,
-        8,
-        6,
-        5,
-        5,
-        1,
-        6,
-        5,
-        2,
-        7,
-        10,
-        5,
-        10,
-        10,
-        9,
-        10,
-        5,
-        1,
-        9,
-        1,
-        10,
-        9,
-        7
-      ],
-      "poster": "MV5BYWRjMzNmNmMtNGM1NC00OGU5LWJhNmMtNmUzNDMwZjBiOGNhXkEyXkFqcGdeQXVyMjA1MDcxMw@@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "contentRating": "",
-      "duration": "PT100M",
-      "releaseDate": "2018-03-16",
-      "averageRating": 0,
-      "originalTitle": "",
-      "storyline": "Hank, a solitary man living a dull existence in the sleepy, Southern town raises eyebrows when he develops a questionable relationship with Josie, a recently transplanted high school student.",
-      "actors": [
-        "Sophie Turner",
-        "Dylan McDermott",
-        "Jack Kilmer"
-      ],
-      "imdbRating": 7.6,
-      "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BYWRjMzNmNmMtNGM1NC00OGU5LWJhNmMtNmUzNDMwZjBiOGNhXkEyXkFqcGdeQXVyMjA1MDcxMw@@._V1_SY500_CR0,0,337,500_AL_.jpg"
-    },
-    {
       "id": "27",
       "title": "I Can Only Imagine",
       "year": "2018",
@@ -32823,11 +32768,11 @@
       "id": "tYiOosL"
     }
   ],
-
+  
   "admin": [
     {
-    "login": "test", 
-    "password": "12345678"
-    }]
+      "login": "test",
+      "password": "12345678"
+    }
+  ]
 }
-
