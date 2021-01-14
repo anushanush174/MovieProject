@@ -13,6 +13,7 @@ import { SearchComponent } from './search/search.component';
 import { ShowModalComponent } from './show-modal/show-modal.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginPageComponent } from './login/login-page.component';
+import { AuthenticcationService } from './login/authentication.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,10 @@ import { LoginPageComponent } from './login/login-page.component';
     ReactiveFormsModule,
     AppRoutingModule,
   ],
-  providers: [MovieService],
+  providers: [
+    MovieService,
+    AuthenticcationService
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

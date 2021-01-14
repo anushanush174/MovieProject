@@ -17,7 +17,7 @@ export interface Movie {
 
 @Injectable()
 export class MovieService {
-  private API_URL = environment.API_URL;
+  private API_URL = environment.API_URL + 'movies';
   public subject = new Subject<any>();
 
   public paramsForSearch = {

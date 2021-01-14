@@ -49,7 +49,6 @@ export class UpdateMovieComponent implements OnInit {
     this.movieService
       .putEditedMovie(this.id, this.editMovieForm.value)
       .subscribe(() => {
-        console.log(this.editMovieForm.value);
         return this.movieService.getMovieList();
       });
     this.router.navigate(['/']);
