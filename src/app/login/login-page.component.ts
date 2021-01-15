@@ -24,15 +24,13 @@ export class LoginPageComponent implements OnInit {
 
     this.authenticationService
         .getAuthData(login, password)
-        .subscribe((data) => {
-            data.forEach((res) => {
-                if (res.login === login && res.password === password) {
-                    localStorage.setItem('userData', JSON.stringify(data));
-                    alert('Success');
-                }else{
-                    alert('Please try again :( ');
-                }
-        });
+        .subscribe((data: any[]) => {
+          if (data.length){
+            localStorage.setItem('userData', JSON.stringify(data));
+            alert('Success');
+          }else {
+            alert('Please try again :( ');
+          }
         });
     }
 }
