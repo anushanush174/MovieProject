@@ -26,7 +26,6 @@ export class CreateMovieComponent implements OnInit {
 
   onClick(): void {
     const formData = { ...this.createMovieForm.value };
-    console.log(formData);
     this.movieService.createNewMovie(formData).subscribe(() => {
       this.movieService.getMovieList();
     });

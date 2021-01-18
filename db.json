@@ -56,61 +56,6 @@
       "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTRjNDc5NTAtZGJlYS00NTg4LTk2NTEtNGUwY2NiZWM3YTY2XkEyXkFqcGdeQXVyNTQ3MjE4NTU@._V1_SY456_SX295_AL_.jpg"
     },
     {
-      "id": "28",
-      "title": "Journey's End",
-      "year": "2017",
-      "genres": [
-        "Drama",
-        "War"
-      ],
-      "ratings": [
-        4,
-        8,
-        2,
-        5,
-        8,
-        5,
-        4,
-        1,
-        7,
-        4,
-        4,
-        3,
-        6,
-        7,
-        8,
-        6,
-        5,
-        7,
-        8,
-        8,
-        1,
-        9,
-        4,
-        5,
-        1,
-        1,
-        10,
-        2,
-        10,
-        1
-      ],
-      "poster": "MV5BOTAyZDBiYjktMTdlZi00MGQ5LWE5NmItYjI3YWMwN2I0NjYxXkEyXkFqcGdeQXVyNjUzODM0ODI@._V1_SY400_CR0,0,272,400_AL_.jpg",
-      "contentRating": "R",
-      "duration": "PT107M",
-      "releaseDate": "2018-02-02",
-      "averageRating": 0,
-      "originalTitle": "",
-      "storyline": "Set in a dugout in Aisne in 1918, it is the story of a group of British officers, led by the mentally disintegrating young officer Stanhope, as they await their fate.",
-      "actors": [
-        "Paul Bettany",
-        "Sam Claflin",
-        "Asa Butterfield"
-      ],
-      "imdbRating": 7.2,
-      "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BOTAyZDBiYjktMTdlZi00MGQ5LWE5NmItYjI3YWMwN2I0NjYxXkEyXkFqcGdeQXVyNjUzODM0ODI@._V1_SY400_CR0,0,272,400_AL_.jpg"
-    },
-    {
       "id": "30",
       "title": "Pacific Rim Uprising",
       "year": "2018",
@@ -32768,7 +32713,6 @@
       "id": "tYiOosL"
     }
   ],
-  
   "admin": [
     {
       "login": "test",
