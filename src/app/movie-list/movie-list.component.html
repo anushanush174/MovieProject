@@ -1,6 +1,11 @@
 <div>
-<button class="login-btn" [routerLink]="['/log-in']">Log in</button>
+<button *ngIf="!isLogged; else logout" class="login-btn" [routerLink]="['/log-in']">Log In</button>
 </div>
+<ng-template #logout>
+  <div>
+    <button type="submit" class="login-btn" (click)="onLogout()">Log Out</button>
+  </div>  
+</ng-template>
 <app-search></app-search>
 <div>
   <button class="add-button" [routerLink]="['/add-movie']">Add Movie</button>

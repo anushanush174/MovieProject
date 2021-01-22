@@ -14,7 +14,7 @@ export class LoginPageComponent implements OnInit {
   constructor(
     private authenticationService: AuthenticcationService,
     private authService: AuthService,
-    private router: Router
+    private router: Router,
   ) {}
 
   ngOnInit(): void {
@@ -34,21 +34,19 @@ export class LoginPageComponent implements OnInit {
         if (data.length) {
           localStorage.setItem('userData', JSON.stringify(data));
           alert('Success');
+          this.authLogin();
           this.router.navigate(['/']);
         } else {
           alert('Please try again :( ');
+          this.router.navigate(['/log-in']);
+          this.loginFormGroup.reset();
         }
       }
     );
-    this.authLogin();
   }
 
   authLogin(): any{
     return this.authService.login();
-  }
-
-  authLogout(): any{
-    return this.authService.logout();
   }
 
 }

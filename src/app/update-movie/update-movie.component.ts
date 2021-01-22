@@ -29,7 +29,7 @@ export class UpdateMovieComponent implements OnInit {
         duration: movie.duration,
         genres: '',
         storyline: movie.storyline,
-        posterUrl: this.editMovieForm.value.posterUrl,
+        // posterUrl: this.editMovieForm.value.posterUrl,
       });
     });
   }
