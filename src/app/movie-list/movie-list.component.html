@@ -1,9 +1,9 @@
 <div>
-<button *ngIf="!isLogged; else logout" class="login-btn" [routerLink]="['/log-in']">Log In</button>
+<button *ngIf="!isLogged; else logout" class="login-logout-btn" [routerLink]="['/log-in']">Log In</button>
 </div>
 <ng-template #logout>
   <div>
-    <button type="submit" class="login-btn" (click)="onLogout()">Log Out</button>
+    <button type="submit" class="login-logout-btn" (click)="onLogout()">Log Out</button>
   </div>  
 </ng-template>
 <app-search></app-search>

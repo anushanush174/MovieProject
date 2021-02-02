@@ -45,16 +45,20 @@ input[type="submit"]:hover {
   background-color: #337ab7;
 }
 
-.login-btn{
+.login-logout-btn{
   float: right;
   background-color: rgb(161, 159, 159);
 }
 
 .login-button{
-  text-align: center;
+  float: left;
+  margin-left: 60px;
+  display: flex
 }
 
 .add-button {
+  float: right;
+  margin-right: 60px;
   background-color: #5cb85c;
 }
 

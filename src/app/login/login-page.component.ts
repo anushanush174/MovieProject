@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../auth-service';
 import { AuthenticcationService } from './authentication.service';
 
@@ -10,11 +10,13 @@ import { AuthenticcationService } from './authentication.service';
 })
 export class LoginPageComponent implements OnInit {
   public loginFormGroup: FormGroup;
+  returnUrl: string;
 
   constructor(
     private authenticationService: AuthenticcationService,
     private authService: AuthService,
     private router: Router,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
@@ -22,6 +24,8 @@ export class LoginPageComponent implements OnInit {
       login: new FormControl(''),
       password: new FormControl(''),
     });
+
+    this.returnUrl = this.route.snapshot.queryParams.returnUrl || '/';
   }
 
   onLogin(): void {
@@ -35,18 +39,15 @@ export class LoginPageComponent implements OnInit {
           localStorage.setItem('userData', JSON.stringify(data));
           alert('Success');
           this.authLogin();
-          this.router.navigate(['/']);
+          this.router.navigateByUrl(this.returnUrl);
         } else {
           alert('Please try again :( ');
-          this.router.navigate(['/log-in']);
           this.loginFormGroup.reset();
         }
-      }
-    );
+      });
   }
 
-  authLogin(): any{
+  authLogin(): any {
     return this.authService.login();
   }
-
 }
