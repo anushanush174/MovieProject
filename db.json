@@ -32672,8 +32672,11 @@
   ],
   "admin": [
     {
-      "password": "vvbb",
-      "id": "1"
+      "id": "1",
+      "login": "test",
+      "password": "123456",
+      "email": "gmailcom"
+
     }
   ]
 }

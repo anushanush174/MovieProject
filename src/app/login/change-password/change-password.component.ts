@@ -11,7 +11,6 @@ import { AuthenticationService } from '../authentication.service';
 
 export class ChangePasswordComponent implements OnInit {
   changePassFormGroup: FormGroup;
-  admin;
   constructor(
     private authenticationService: AuthenticationService,
     private router: Router
