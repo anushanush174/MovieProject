@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../auth-service';
-import { AuthenticcationService } from './authentication.service';
+import { AuthenticationService } from './authentication.service';
 
 @Component({
   selector: 'app-login-page',
@@ -13,7 +13,7 @@ export class LoginPageComponent implements OnInit {
   returnUrl: string;
 
   constructor(
-    private authenticationService: AuthenticcationService,
+    private authenticationService: AuthenticationService,
     private authService: AuthService,
     private router: Router,
     private route: ActivatedRoute

@@ -1,6 +1,7 @@
 <p [routerLink]="['/']">To Home Page</p>
 <div class="forms">
-    <h1>Enter Your Login and Password</h1>
+    <div class="info"> <h1>Enter Your Login and Password</h1> 
+    </div>
     <form [formGroup]="loginFormGroup">
         <div>
             <input type="text" placeholder="Login" formControlName="login">
@@ -8,7 +9,8 @@
         <div>
             <input type="password" placeholder="password" formControlName="password">
         </div>
-        <div>
+        <div class="collect-buttons">
+            <div class="middle-text" [routerLink]="['/forgot-pass']">Forgot password?</div>
             <div>
                 <button class="login-button" (click)="onLogin()">Login</button>
             </div>

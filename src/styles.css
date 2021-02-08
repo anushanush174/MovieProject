@@ -6,6 +6,7 @@ button {
 }
 
 input[type="text"],
+input[type="email"],
 select {
   width: 100%;
   padding: 12px 20px;
@@ -52,7 +53,7 @@ input[type="submit"]:hover {
 
 .login-button{
   float: left;
-  margin-left: 60px;
+  margin-left: 30px;
   display: flex
 }
 
@@ -64,7 +65,7 @@ input[type="submit"]:hover {
 
 .cancel-btn {
   float: right;
-  margin-right: 60px;
+  margin-right: 30px;
   background-color: #bbbbbb;
 }
 
@@ -81,7 +82,23 @@ input[type="submit"]:hover {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  border: 5px solid #00000041;
+  border: 5px solid #00000060;
   padding: 10px;
 }
 
+.middle-text{
+bottom: 5%;
+position: absolute;
+left: 50%;
+transform: translate(-50%, -50%);
+padding: 30px;
+color: #3174af;
+}
+
+.collect-buttons{
+  padding: 50px;
+}
+
+.info{
+  margin: 70px;
+}

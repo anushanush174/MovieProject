@@ -13,7 +13,9 @@ import { SearchComponent } from './search/search.component';
 import { ShowModalComponent } from './show-modal/show-modal.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginPageComponent } from './login/login-page.component';
-import { AuthenticcationService } from './login/authentication.service';
+import { AuthenticationService } from './login/authentication.service';
+import { ForgotPasswordComponent } from './login/forgot-password/forgot-password.component';
+import { ChangePasswordComponent } from './login/change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { AuthenticcationService } from './login/authentication.service';
     DeleteMovieComponent,
     UpdateMovieComponent,
     ShowModalComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    ForgotPasswordComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,7 @@ import { AuthenticcationService } from './login/authentication.service';
   ],
   providers: [
     MovieService,
-    AuthenticcationService
+    AuthenticationService
   ],
   bootstrap: [AppComponent],
 })
