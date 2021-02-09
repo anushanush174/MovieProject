@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 export interface Admin {
@@ -13,7 +12,7 @@ export interface Admin {
 @Injectable()
 export class AuthenticationService {
     private API_URL = environment.API_URL + 'admin';
-    public authDataSubj =  new Subject<any>();
+    public authPerson;
     constructor( private http: HttpClient) {
     }
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../authentication.service';
 
@@ -27,7 +27,7 @@ export class ForgotPasswordComponent implements OnInit {
     const email = this.formGroup.get('email').value;
     this.authenticationService.getEmail(email).subscribe(result => {
       if (result.length) {
-        this.authenticationService.authDataSubj.next(result);
+        this.authenticationService.authPerson = result;
         this.router.navigate(['/change-pass']);
       } else {
         alert('please write correct email');

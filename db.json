@@ -32674,9 +32674,8 @@
     {
       "id": "1",
       "login": "test",
-      "password": "123456",
+      "password": "456",
       "email": "gmailcom"
-
     }
   ]
 }
