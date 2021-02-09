@@ -12,7 +12,7 @@ export interface Admin {
 @Injectable()
 export class AuthenticationService {
     private API_URL = environment.API_URL + 'admin';
-    public authPerson;
+    public authPerson: any;
     constructor( private http: HttpClient) {
     }
 

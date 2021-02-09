@@ -18,17 +18,29 @@ export class ChangePasswordComponent implements OnInit {
 
   ngOnInit(): void {
     this.changePassFormGroup = new FormGroup({
-      newPass: new FormControl('')
+      newPass: new FormControl(''),
+      repeatNewPass:  new FormControl('')
     });
   }
 
   changePassword(): any{
-    const newPassword = { password: this.changePassFormGroup.get('newPass').value};
-    const person = this.authenticationService.authPerson[0];
-    this.authenticationService.changePassword( person.id, newPassword ).subscribe(() => {
-      alert('Your Password Have Been Changed Succesfully');
-    });
-    this.router.navigate(['/log-in']);
+    const newPass = this.changePassFormGroup.get('newPass').value;
+    const repeatedPass = this.changePassFormGroup.get('repeatNewPass').value;
+
+    if (newPass === repeatedPass) {
+      const newPassword = { password: newPass};
+      const person = this.authenticationService.authPerson[0];
+      this.authenticationService.changePassword( person.id, newPassword ).subscribe(() => {
+        alert('Your Password Have Been Changed Succesfully');
+        this.router.navigate(['/log-in']);
+      });
+    } else {
+      alert('Something Gone Wrong, Try Again');
+    }
+
   }
+
+
+
 
 }
