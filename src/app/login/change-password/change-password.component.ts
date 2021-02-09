@@ -24,10 +24,9 @@ export class ChangePasswordComponent implements OnInit {
 
   changePassword(): any{
     const newPassword = { password: this.changePassFormGroup.get('newPass').value};
-    this.authenticationService.authPerson.forEach(person => {
-      this.authenticationService.changePassword( person.id, newPassword ).subscribe(() => {
-        alert('Your Password Have Been Changed Succesfully');
-      });
+    const person = this.authenticationService.authPerson[0];
+    this.authenticationService.changePassword( person.id, newPassword ).subscribe(() => {
+      alert('Your Password Have Been Changed Succesfully');
     });
     this.router.navigate(['/log-in']);
   }
