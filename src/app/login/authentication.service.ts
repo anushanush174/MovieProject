@@ -22,10 +22,6 @@ export class AuthenticationService {
         return this.http.get<void>(this.API_URL + '?login=' + login + '&password=' + password );
     }
 
-    getUsersList(): any{
-        return this.http.get<void>(this.API_URL);
-    }
-
     getEmail(email): any{
         return this.http.get<void>(this.API_URL + '?email=' + email);
     }
