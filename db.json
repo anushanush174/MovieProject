@@ -32672,10 +32672,46 @@
   ],
   "admin": [
     {
-      "id": "1",
-      "login": "test",
-      "password": "777",
-      "email": "gmailcom"
+      "login": "nkd",
+      "email": "v@mail",
+      "password": "888888",
+      "id": "wmkJKxQ"
+    },
+    {
+      "login": "3",
+      "email": "333@3",
+      "password": "333336",
+      "id": "WNr6g4r"
+    },
+    {
+      "login": "a",
+      "email": "a@a",
+      "password": "aaaaaa",
+      "id": "Cfmmkq3"
+    },
+    {
+      "login": "Anush",
+      "email": "Anush@mail",
+      "password": "anushik",
+      "id": "EbuxmFX"
+    },
+    {
+      "login": "anun",
+      "email": "mail@mail",
+      "password": "111111",
+      "id": "iWLVDAO"
+    },
+    {
+      "login": "azganun",
+      "email": "mail@m",
+      "password": "123456",
+      "id": "e6JyrOH"
+    },
+    {
+      "login": "elelel",
+      "email": "el@el",
+      "password": "123456",
+      "id": "WqVNKqv"
     }
   ]
 }

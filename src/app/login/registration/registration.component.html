@@ -1,0 +1,41 @@
+<div class="forms">
+    <div class="info"><h1>Registration</h1></div>
+    <form [formGroup]="registrationFormGroup">
+        <div>
+            <input type="text" placeholder="Name Surname" formControlName="login">
+            <div *ngIf="registrationFormGroup.get('login').invalid && registrationFormGroup.get('login').touched">
+                <small *ngIf="registrationFormGroup.get('login').errors.required">This Field Can't Be Empty</small>
+            </div>
+        </div>
+        <div>
+            <input type="text" placeholder="Email" formControlName="email">
+            <div *ngIf="registrationFormGroup.get('email').invalid && registrationFormGroup.get('email').touched">
+                <small *ngIf="registrationFormGroup.get('email').errors.required">This Field Can't Be Empty</small>
+                <small *ngIf="registrationFormGroup.get('email').errors.email">Write Currect Email</small>
+            </div>
+        </div>
+        <div>
+            <input type="password" placeholder="Password" formControlName="password">
+            <div *ngIf="registrationFormGroup.get('password').invalid && registrationFormGroup.get('password').touched">
+                <small *ngIf="registrationFormGroup.get('password').errors.required">This Field Can't Be Empty</small>
+                <small *ngIf="registrationFormGroup.get('password').errors.minlength">
+                    Length can't be less than {{registrationFormGroup.get('password').errors.minlength.requiredLength}}. 
+                    Currect Length is {{registrationFormGroup.get('password').errors.minlength.actualLength}}.
+                </small>            </div>
+        </div>
+        <div>
+            <input type="password" placeholder="Repeat Password" formControlName="repeatPass">
+            <div *ngIf="registrationFormGroup.get('repeatPass').invalid && registrationFormGroup.get('repeatPass').touched">
+                <small *ngIf="registrationFormGroup.get('repeatPass').errors.required">This Field Can't Be Empty</small>
+                <small *ngIf="registrationFormGroup.get('repeatPass').errors.minlength">
+                    Length can't be less than {{registrationFormGroup.get('repeatPass').errors.minlength.requiredLength}}. 
+                    Currect Length is {{registrationFormGroup.get('repeatPass').errors.minlength.actualLength}}.
+                </small>
+            </div>
+        </div>
+        <div>
+            <button class="login-button" (click)="signup()" [disabled]="registrationFormGroup.invalid">Signup</button>
+            <button class="cancel-btn" [routerLink]="['/']">Cancel</button>
+        </div>
+    </form>
+</div>

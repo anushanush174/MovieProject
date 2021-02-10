@@ -5,6 +5,7 @@ import { CreateMovieComponent } from './create-movie/create-movie.component';
 import { ChangePasswordComponent } from './login/change-password/change-password.component';
 import { ForgotPasswordComponent } from './login/forgot-password/forgot-password.component';
 import { LoginPageComponent } from './login/login-page.component';
+import { RegistrationComponent } from './login/registration/registration.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { UpdateMovieComponent } from './update-movie/update-movie.component';
 
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'log-in', component: LoginPageComponent},
   { path: 'forgot-pass', component: ForgotPasswordComponent},
   { path: 'change-pass', component: ChangePasswordComponent},
+  { path: 'registration', component: RegistrationComponent},
 ];
 
 @NgModule({

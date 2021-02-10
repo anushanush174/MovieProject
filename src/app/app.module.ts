@@ -16,6 +16,7 @@ import { LoginPageComponent } from './login/login-page.component';
 import { AuthenticationService } from './login/authentication.service';
 import { ForgotPasswordComponent } from './login/forgot-password/forgot-password.component';
 import { ChangePasswordComponent } from './login/change-password/change-password.component';
+import { RegistrationComponent } from './login/registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ChangePasswordComponent } from './login/change-password/change-password
     ShowModalComponent,
     LoginPageComponent,
     ForgotPasswordComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
