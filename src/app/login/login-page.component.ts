@@ -32,22 +32,19 @@ export class LoginPageComponent implements OnInit {
     const login = this.loginFormGroup.get('login').value;
     const password = this.loginFormGroup.get('password').value;
 
-    this.authenticationService
-      .getAuthData(login, password)
-      .subscribe((data: any[]) => {
-        if (data.length) {
-          localStorage.setItem('userData', JSON.stringify(data));
-          alert('Success');
-          this.authLogin();
-          this.router.navigateByUrl(this.returnUrl);
-        } else {
-          alert('Please try again :( ');
-          this.loginFormGroup.reset();
-        }
-      });
+    this.authenticationService.getAuthData(login, password).subscribe((data: any[]) => {
+      if (data.length) {
+        localStorage.setItem('userData', JSON.stringify(data));
+        this.authLogin();
+        this.router.navigateByUrl(this.returnUrl);
+      } else {
+        alert('Please try again :( ');
+        this.loginFormGroup.reset();
+      }
+    });
   }
 
-  authLogin(): any {
+  private authLogin(): any {
     return this.authService.login();
   }
 }

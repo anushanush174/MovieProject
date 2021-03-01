@@ -27,7 +27,7 @@ export class ChangePasswordComponent implements OnInit {
     const repeatedPass = this.changePassFormGroup.get('repeatNewPass').value;
 
     if (newPass === repeatedPass) {
-      const newPassword = { password: newPass};
+      const newPassword = { password: newPass };
       const person = this.authenticationService.authPerson[0];
       this.authenticationService.changePassword( person.id, newPassword ).subscribe(() => {
         alert('Your Password Have Been Changed Succesfully');
@@ -36,10 +36,6 @@ export class ChangePasswordComponent implements OnInit {
     } else {
       alert('Something Gone Wrong, Try Again');
     }
-
   }
-
-
-
 
 }

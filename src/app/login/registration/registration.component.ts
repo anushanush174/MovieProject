@@ -14,7 +14,7 @@ export class RegistrationComponent implements OnInit {
   constructor(
     private authenticationService: AuthenticationService,
     private router: Router
-    ) {}
+  ) {}
 
   ngOnInit(): void {
     this.registrationFormGroup = new FormGroup({
@@ -32,7 +32,6 @@ export class RegistrationComponent implements OnInit {
   }
 
   signup(): void {
-
     this.authenticationService.getEmail(this.registrationFormGroup.get('email').value).subscribe( res => {
       if (res.length) {
         alert('This Email Has Already Been Used ');
@@ -54,6 +53,5 @@ export class RegistrationComponent implements OnInit {
       }
     });
   }
-
 
 }
