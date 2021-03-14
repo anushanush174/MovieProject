@@ -12,11 +12,7 @@ import { UpdateMovieComponent } from './update-movie/update-movie.component';
 import { SearchComponent } from './search/search.component';
 import { ShowModalComponent } from './show-modal/show-modal.component';
 import { AppRoutingModule } from './app-routing.module';
-import { LoginPageComponent } from './login/login-page.component';
-import { AuthenticationService } from './login/authentication.service';
-import { ForgotPasswordComponent } from './login/forgot-password/forgot-password.component';
-import { ChangePasswordComponent } from './login/change-password/change-password.component';
-import { RegistrationComponent } from './login/registration/registration.component';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -26,11 +22,7 @@ import { RegistrationComponent } from './login/registration/registration.compone
     CreateMovieComponent,
     DeleteMovieComponent,
     UpdateMovieComponent,
-    ShowModalComponent,
-    LoginPageComponent,
-    ForgotPasswordComponent,
-    ChangePasswordComponent,
-    RegistrationComponent
+    ShowModalComponent
   ],
   imports: [
     BrowserModule,
@@ -38,10 +30,10 @@ import { RegistrationComponent } from './login/registration/registration.compone
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    AuthModule
   ],
   providers: [
-    MovieService,
-    AuthenticationService
+    MovieService
   ],
   bootstrap: [AppComponent],
 })

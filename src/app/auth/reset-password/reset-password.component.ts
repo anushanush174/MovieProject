@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthenticationService } from '../authentication.service';
+import { AuthService } from '../auth.service';
 
 @Component({
-  selector: 'app-change-password',
-  templateUrl: './change-password.component.html',
+  selector: 'app-reset-password',
+  templateUrl: './reset-password.component.html',
 })
 
-export class ChangePasswordComponent implements OnInit {
+export class ResetPasswordComponent implements OnInit {
   changePassFormGroup: FormGroup;
   constructor(
-    private authenticationService: AuthenticationService,
+    private authenticationService: AuthService,
     private router: Router
   ) { }
 
@@ -29,9 +29,10 @@ export class ChangePasswordComponent implements OnInit {
     if (newPass === repeatedPass) {
       const newPassword = { password: newPass };
       const person = this.authenticationService.authPerson[0];
+      console.log(person);
       this.authenticationService.changePassword( person.id, newPassword ).subscribe(() => {
         alert('Your Password Have Been Changed Succesfully');
-        this.router.navigate(['/log-in']);
+        this.router.navigate(['auth/login']);
       });
     } else {
       alert('Something Gone Wrong, Try Again');

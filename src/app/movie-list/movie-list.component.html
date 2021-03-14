@@ -1,6 +1,6 @@
 <div>
-<button *ngIf="!isLogged; else logout" class="login-logout-btn" [routerLink]="['/log-in']">Log In</button>
-<button *ngIf="!isLogged" class="login-logout-btn" [routerLink]="['/registration']">Signup</button>
+<button *ngIf="!isLogged; else logout" class="login-logout-btn" routerLink="auth/login">Log In</button>
+<button *ngIf="!isLogged" class="login-logout-btn" routerLink="auth/signup">Signup</button>
 
 </div>
 <ng-template #logout>

@@ -1,20 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AuthService } from '../auth-service';
-import { AuthenticationService } from './authentication.service';
+import { AuthService } from '../auth.service';
+
 
 @Component({
-  selector: 'app-login-page',
-  templateUrl: './login-page.component.html',
+  selector: 'app-login',
+  templateUrl: './login.component.html',
 })
-export class LoginPageComponent implements OnInit {
+export class LoginComponent implements OnInit {
   public loginFormGroup: FormGroup;
   returnUrl: string;
 
   constructor(
-    private authenticationService: AuthenticationService,
-    private authService: AuthService,
+    private authenticationService: AuthService,
     private router: Router,
     private route: ActivatedRoute
   ) {}
@@ -44,7 +43,8 @@ export class LoginPageComponent implements OnInit {
     });
   }
 
+  /*istanbul ignore next*/
   private authLogin(): any {
-    return this.authService.login();
+    // return this.authService.login();
   }
 }
