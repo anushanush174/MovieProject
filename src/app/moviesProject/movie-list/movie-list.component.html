@@ -10,7 +10,7 @@
 </ng-template>
 <app-search></app-search>
 <div>
-  <button class="add-button" [routerLink]="['/add-movie']">Add Movie</button>
+  <button class="add-button" routerLink="/create-movie">Create Movie</button>
 </div>
 <div class="list">
   <div *ngFor="let movie of movieList" class="movie-list">
@@ -21,7 +21,7 @@
       <app-delete-movie [movieId]="movie.id"></app-delete-movie>
     </div>
     <div class="btn-div">
-      <button class="edit-btn" [routerLink]="['/edit-movie/', movie.id]">
+      <button class="edit-btn" [routerLink]="['/update-movie/', movie.id]">
         Edit
       </button>
     </div>

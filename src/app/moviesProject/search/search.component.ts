@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Subject } from 'rxjs';
-import { MovieService } from '../movie-list/movie.service';
+import { MovieService } from '../movie.service';
 
 @Component({
   selector: 'app-search',

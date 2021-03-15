@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../auth-service';
-import { Movie, MovieService } from './movie.service';
+import { AuthService } from 'src/app/auth-service';
+import { Movie, MovieService } from '../movie.service';
 
 @Component({
   selector: 'app-movie-list',

@@ -12,7 +12,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [LoginComponent, SignupComponent, ForgotPasswordComponent, ResetPasswordComponent, AppComponent],
+  declarations: [
+    LoginComponent,
+    SignupComponent,
+    ForgotPasswordComponent,
+    ResetPasswordComponent,
+    AppComponent
+  ],
   imports: [
     CommonModule,
     AuthRoutingModule,

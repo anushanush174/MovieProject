@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { MovieService } from '../movie-list/movie.service';
+import { MovieService } from '../movie.service';
 
 @Component({
   selector: 'app-create-movie',
@@ -10,7 +10,10 @@ import { MovieService } from '../movie-list/movie.service';
 })
 export class CreateMovieComponent implements OnInit {
   public createMovieForm: FormGroup;
-  constructor(private movieService: MovieService, private router: Router) {}
+  constructor(
+    private movieService: MovieService,
+    private router: Router
+    ) {}
 
   ngOnInit(): void {
     this.createMovieForm = new FormGroup({
