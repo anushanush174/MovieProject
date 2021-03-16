@@ -45,7 +45,7 @@ export class SignupComponent implements OnInit {
             };
             this.authenticationService.createUser(formData).subscribe();
             this.registrationFormGroup.reset();
-            this.router.navigate(['/log-in']);
+            this.router.navigate(['auth/login']);
           } else {
             alert('Please Write Correct Password');
           }

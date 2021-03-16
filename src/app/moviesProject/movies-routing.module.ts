@@ -12,12 +12,13 @@ import { UpdateMovieComponent } from './update-movie/update-movie.component';
 const routes: Routes = [
   { path: '', component: AppComponent, children: [
     { path: '', component: MovieListComponent },
-    { path: 'create-movie', component: CreateMovieComponent },
-    { path: 'update-movie/:id', component: UpdateMovieComponent },
+    { path: 'create-movie', component: CreateMovieComponent, canActivate: [AuthGuard] },
+    { path: 'update-movie/:id', component: UpdateMovieComponent, canActivate: [AuthGuard] },
   ]},
 ];
 
 @NgModule({
+  declarations: [AppComponent],
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
   providers: [AuthGuard],

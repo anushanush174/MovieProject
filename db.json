@@ -1,173 +1,6 @@
 {
   "movies": [
     {
-      "id": "30",
-      "title": "Pacific Rim Uprising",
-      "year": "2018",
-      "genres": [
-        "Action",
-        "Adventure",
-        "Sci-Fi"
-      ],
-      "ratings": [
-        7,
-        3,
-        6,
-        6,
-        7,
-        8,
-        6,
-        10,
-        4,
-        7,
-        10,
-        1,
-        4,
-        4,
-        1,
-        1,
-        1,
-        6,
-        4,
-        9,
-        8,
-        6,
-        5,
-        4,
-        10,
-        6,
-        8,
-        1,
-        3,
-        3
-      ],
-      "poster": "MV5BMjExMjM3MzM4NV5BMl5BanBnXkFtZTgwNjIyMzQ2NDM@._V1_SY500_CR0,0,315,500_AL_.jpg",
-      "contentRating": "PG-13",
-      "duration": "",
-      "releaseDate": "2018-03-23",
-      "averageRating": 0,
-      "originalTitle": "",
-      "storyline": "Jake Pentecost, son of Stacker Pentecost, reunites with Mako Mori to lead a new generation of Jaeger pilots, including rival Lambert and 15-year-old hacker Amara, against a new Kaiju threat.",
-      "actors": [
-        "Scott Eastwood",
-        "Adria Arjona",
-        "Tian Jing"
-      ],
-      "imdbRating": "",
-      "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjExMjM3MzM4NV5BMl5BanBnXkFtZTgwNjIyMzQ2NDM@._V1_SY500_CR0,0,315,500_AL_.jpg"
-    },
-    {
-      "id": "31",
-      "title": "Isle of Dogs",
-      "year": "2018",
-      "genres": [
-        "Animation",
-        "Adventure",
-        "Comedy"
-      ],
-      "ratings": [
-        8,
-        9,
-        3,
-        1,
-        10,
-        7,
-        4,
-        1,
-        10,
-        10,
-        1,
-        6,
-        7,
-        4,
-        2,
-        10,
-        9,
-        10,
-        1,
-        8,
-        1,
-        2,
-        4,
-        1,
-        9,
-        4,
-        4,
-        6,
-        10,
-        8
-      ],
-      "poster": "MV5BMTYyOTUwNjAxM15BMl5BanBnXkFtZTgwODcyMzE0NDM@._V1_SX265_CR0,0,265,420_AL_.jpg",
-      "contentRating": "PG-13",
-      "duration": "",
-      "releaseDate": "2018-05-04",
-      "averageRating": 0,
-      "originalTitle": "",
-      "storyline": "Set in Japan, Isle of Dogs follows a boy's odyssey in search of his dog.",
-      "actors": [
-        "Bryan Cranston",
-        "Koyu Rankin",
-        "Edward Norton"
-      ],
-      "imdbRating": "",
-      "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTYyOTUwNjAxM15BMl5BanBnXkFtZTgwODcyMzE0NDM@._V1_SX265_CR0,0,265,420_AL_.jpg"
-    },
-    {
-      "id": "32",
-      "title": "Unsane",
-      "year": "2018",
-      "genres": [
-        "Horror",
-        "Thriller"
-      ],
-      "ratings": [
-        2,
-        1,
-        10,
-        10,
-        3,
-        7,
-        3,
-        3,
-        10,
-        1,
-        5,
-        9,
-        9,
-        8,
-        8,
-        4,
-        5,
-        7,
-        8,
-        9,
-        6,
-        4,
-        5,
-        4,
-        2,
-        1,
-        6,
-        1,
-        9,
-        1
-      ],
-      "poster": "MV5BNTYzMDYzMzA1MV5BMl5BanBnXkFtZTgwODUzODg2NDM@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "contentRating": "R",
-      "duration": "",
-      "releaseDate": "2018-06-20",
-      "averageRating": 0,
-      "originalTitle": "",
-      "storyline": "A young woman is involuntarily committed to a mental institution, where she is confronted by her greatest fear--but is it real or a product of her delusion?",
-      "actors": [
-        "Claire Foy",
-        "Juno Temple",
-        "Aimee Mullins"
-      ],
-      "imdbRating": "",
-      "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNTYzMDYzMzA1MV5BMl5BanBnXkFtZTgwODUzODg2NDM@._V1_SY500_CR0,0,337,500_AL_.jpg"
-    },
-    {
       "id": "33",
       "title": "Sherlock Gnomes",
       "year": "2018",
@@ -32613,6 +32446,16 @@
       "genres": "",
       "description": "",
       "id": "q8MRgYr"
+    },
+    {
+      "title": "my loved movie",
+      "year": "2021",
+      "actors": "anush ",
+      "duration": "2h 3sec",
+      "raiting": "",
+      "genres": "Documentary",
+      "description": "a story about something that cant understand",
+      "id": "NMepeuR"
     }
   ],
   "admin": [
@@ -32669,6 +32512,18 @@
       "email": "test@test",
       "password": "123456",
       "id": "5ULnNhu"
+    },
+    {
+      "login": "t",
+      "email": "t@t",
+      "password": "tttttt",
+      "id": "ocbAmQU"
+    },
+    {
+      "login": "u",
+      "email": "u@u",
+      "password": "uuuuuu",
+      "id": "3vMLnIR"
     }
   ]
 }
