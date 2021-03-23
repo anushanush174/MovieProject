@@ -7,14 +7,14 @@ export interface User {
     login: string;
     password: any;
     email: any;
+    user_type?: string;
   }
 
 @Injectable()
 export class AuthService {
-    private API_URL = environment.API_URL + 'admin';
+    private API_URL = environment.API_URL + 'users';
     public authPerson: any;
-    constructor( private http: HttpClient) {
-    }
+    constructor( private http: HttpClient) {}
 
     // http://localhost:3000/admin?login=test&password=12345678
     // http://localhost:3000/admin?email=

@@ -22,7 +22,7 @@ export class ForgotPasswordComponent implements OnInit {
     });
   }
 
-  submit(): void {
+  public submit(): void {
     const email = this.formGroup.get('email').value;
     this.authenticationService.getEmail(email).subscribe(result => {
       if (result.length) {

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/auth-service';
 import { Movie, MovieService } from '../movie.service';
+import {User} from '../../auth/auth.service';
 
 @Component({
   selector: 'app-movie-list',
@@ -11,6 +12,7 @@ import { Movie, MovieService } from '../movie.service';
 export class MovieListComponent implements OnInit {
   public movieList: Movie[];
   public currentPage = 1;
+  public userData: User;
   isLogged = false;
 
   constructor(
@@ -20,22 +22,26 @@ export class MovieListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    const notAuthUser = {login: '', password: '', email: '', user_type: 'stranger'};
+    if (localStorage.getItem('userData') === null) {
+      this.userData = null;
+    }else {
+      this.userData = JSON.parse(localStorage.getItem('userData'))[0];
+    }
     this.movieService.getMovieList();
     this.getMovies();
-    const loggedIn = localStorage.getItem('userData');
-    if (loggedIn) {
+    if (this.userData) {
       this.isLogged = true;
       this.authService.login();
     } else {
       this.onLogout();
+      this.isLogged = false;
+      this.movieService.getMovieList();
     }
+
   }
 
-  authLogout(): any {
-    return this.authService.logout();
-  }
-
-  onLogout(): any {
+  public onLogout(): any {
     this.isLogged = false;
     localStorage.removeItem('userData');
     this.authLogout();
@@ -44,24 +50,24 @@ export class MovieListComponent implements OnInit {
 
   getMovies(): void {
     this.movieService.subject.subscribe((data: Movie[]) => {
-      this.movieService.getRatingAvarage(data);
+      this.movieService.getRatingAverage(data);
       this.movieList = data;
     });
   }
 
-  previewPage(): void {
+  public previewPage(): void {
     if (this.movieService.paramsForSearch._page > 1) {
       this.movieService.paramsForSearch._page--;
     }
     this.movieService.getMovieList();
   }
 
-  nextPage(): void {
+  public nextPage(): void {
     this.movieService.paramsForSearch._page++;
     this.movieService.getMovieList();
   }
 
-  authenticated(): Promise<boolean> | boolean {
-    return this.authService.isAuthenticated();
+  private authLogout(): any {
+    return this.authService.logout();
   }
 }

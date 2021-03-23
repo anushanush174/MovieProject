@@ -21,7 +21,7 @@ export class CreateMovieComponent implements OnInit {
       year: new FormControl(''),
       actors: new FormControl(''),
       duration: new FormControl(''),
-      raiting: new FormControl(''),
+      rating: new FormControl(''),
       genres: new FormControl(''),
       description: new FormControl(''),
     });

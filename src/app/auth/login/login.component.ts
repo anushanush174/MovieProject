@@ -27,14 +27,14 @@ export class LoginComponent implements OnInit {
     this.returnUrl = this.route.snapshot.queryParams.returnUrl || '/';
   }
 
-  onLogin(): void {
+  public onLogin(): void {
     const login = this.loginFormGroup.get('login').value;
     const password = this.loginFormGroup.get('password').value;
 
     this.authenticationService.getAuthData(login, password).subscribe((data: any[]) => {
       if (data.length) {
         localStorage.setItem('userData', JSON.stringify(data));
-        this.authLogin();
+        // this.authLogin();
         this.router.navigateByUrl(this.returnUrl);
       } else {
         alert('Please try again :( ');

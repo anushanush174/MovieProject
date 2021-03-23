@@ -11,7 +11,7 @@
             <input type="text" placeholder="Email" formControlName="email">
             <div *ngIf="registrationFormGroup.get('email').invalid && registrationFormGroup.get('email').touched">
                 <small *ngIf="registrationFormGroup.get('email').errors.required">This Field Can't Be Empty</small>
-                <small *ngIf="registrationFormGroup.get('email').errors.email">Write Currect Email</small>
+                <small *ngIf="registrationFormGroup.get('email').errors.email">Write Correct Email</small>
             </div>
         </div>
         <div>
@@ -19,17 +19,18 @@
             <div *ngIf="registrationFormGroup.get('password').invalid && registrationFormGroup.get('password').touched">
                 <small *ngIf="registrationFormGroup.get('password').errors.required">This Field Can't Be Empty</small>
                 <small *ngIf="registrationFormGroup.get('password').errors.minlength">
-                    Length can't be less than {{registrationFormGroup.get('password').errors.minlength.requiredLength}}. 
-                    Currect Length is {{registrationFormGroup.get('password').errors.minlength.actualLength}}.
-                </small>            </div>
+                    Length can't be less than {{registrationFormGroup.get('password').errors.minlength.requiredLength}}.
+                    Correct Length is {{registrationFormGroup.get('password').errors.minlength.actualLength}}.
+                </small>
+            </div>
         </div>
         <div>
             <input type="password" placeholder="Repeat Password" formControlName="repeatPass">
             <div *ngIf="registrationFormGroup.get('repeatPass').invalid && registrationFormGroup.get('repeatPass').touched">
                 <small *ngIf="registrationFormGroup.get('repeatPass').errors.required">This Field Can't Be Empty</small>
                 <small *ngIf="registrationFormGroup.get('repeatPass').errors.minlength">
-                    Length can't be less than {{registrationFormGroup.get('repeatPass').errors.minlength.requiredLength}}. 
-                    Currect Length is {{registrationFormGroup.get('repeatPass').errors.minlength.actualLength}}.
+                    Length can't be less than {{registrationFormGroup.get('repeatPass').errors.minlength.requiredLength}}.
+                    Correct Length is {{registrationFormGroup.get('repeatPass').errors.minlength.actualLength}}.
                 </small>
             </div>
         </div>

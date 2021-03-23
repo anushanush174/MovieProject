@@ -6,24 +6,26 @@
 <ng-template #logout>
   <div>
     <button type="submit" class="login-logout-btn" (click)="onLogout()">Log Out</button>
-  </div>  
+  </div>
 </ng-template>
 <app-search></app-search>
-<div>
+<div *ngIf="isLogged">
   <button class="add-button" routerLink="/create-movie">Create Movie</button>
 </div>
 <div class="list">
   <div *ngFor="let movie of movieList" class="movie-list">
-    <div class="img-conteiner">
-      <img src="{{ movie.posterurl }}" class="img-class" />
+    <div class="img-container">
+      <img src="{{ movie.posterUrl }}" class="img-class" />
     </div>
-    <div class="btn-div">
-      <app-delete-movie [movieId]="movie.id"></app-delete-movie>
-    </div>
-    <div class="btn-div">
-      <button class="edit-btn" [routerLink]="['/update-movie/', movie.id]">
-        Edit
-      </button>
+    <div *ngIf="isLogged && userData.user_type === 'admin'">
+      <div class="btn-div">
+        <app-delete-movie [movieId]="movie.id"></app-delete-movie>
+      </div>
+      <div class="btn-div">
+        <button class="edit-btn" [routerLink]="['/update-movie/', movie.id]">
+          Edit
+        </button>
+      </div>
     </div>
     <div>
       <span>
@@ -33,7 +35,7 @@
           <small><strong>Genre:</strong> {{ movie.genres }}</small> <br />
           <small><strong>Actors:</strong> {{ movie.actors }}</small> <br />
           <small><strong>Duration:</strong> {{ movie.duration }}</small> <br />
-          <small><strong>Raiting:</strong>{{ movie.rateingAverage | number: "1.1-2" }} from 10</small>
+          <small><strong>Rating:</strong>{{ movie.rateingAverage | number: "1.1-2" }} from 10</small>
         </div>
         <div class="description">
           <h4>Description</h4>

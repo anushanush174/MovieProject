@@ -12,7 +12,7 @@ export interface Movie {
   rating?: number;
   storyline?: string;
   id?: number;
-  posterurl?: string;
+  posterUrl?: string;
 }
 
 @Injectable()
@@ -30,7 +30,7 @@ export class MovieService {
 
   constructor(private http: HttpClient) {}
 
-  getRatingAvarage(list): any {
+  getRatingAverage(list): any {
     list.forEach((movie) => {
       if (movie.rateingAverage) {
         movie.rateingAverage =
@@ -54,7 +54,7 @@ export class MovieService {
   }
 
   deleteMovie(id: number): any {
-    return this.http.delete<void>(this.API_URL + `/${id}`);
+    return this.http.delete<Movie>(this.API_URL + `/${id}`);
   }
 
   createNewMovie(movie: Movie): any {

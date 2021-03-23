@@ -22,7 +22,7 @@ export class ResetPasswordComponent implements OnInit {
     });
   }
 
-  changePassword(): any{
+  public changePassword(): any{
     const newPass = this.changePassFormGroup.get('newPass').value;
     const repeatedPass = this.changePassFormGroup.get('repeatNewPass').value;
 
@@ -31,7 +31,7 @@ export class ResetPasswordComponent implements OnInit {
       const person = this.authenticationService.authPerson[0];
       console.log(person);
       this.authenticationService.changePassword( person.id, newPassword ).subscribe(() => {
-        alert('Your Password Have Been Changed Succesfully');
+        alert('Your Password Have Been Changed Successfully');
         this.router.navigate(['auth/login']);
       });
     } else {
