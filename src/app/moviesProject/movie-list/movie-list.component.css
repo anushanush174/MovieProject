@@ -1,14 +1,17 @@
 .movie-list {
-  border-style: double;
+  border-style: wave;
   margin-top: 5px;
-  border-radius: 10px;
   position: static;
   overflow: auto;
-  padding: 40px;
-  background-color: rgb(243, 243, 243);
+  padding: 10px;
+  background-color: rgb(224, 224, 224);
   margin-top: 30px;
-  margin-right: 300px;
-  margin-left: 300px;
+  margin-right: 110px;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
 }
 
 .img-container {
@@ -54,7 +57,7 @@ button {
 }
 
 .list {
-  margin-bottom: 95px;
+  padding-left: 10px;
 }
 
 .btn-div {

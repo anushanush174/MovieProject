@@ -1,8 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 button {
+  padding: 15px 24px
+}
+
+.btn-inProgress {
   width: 100px;
-  font-size: 12px;
-  padding: 12px 28px;
+  font-size: 15px;
+  float: left;
 }
 
 input[type="text"],
@@ -17,7 +21,7 @@ select {
   box-sizing: border-box;
 }
 
-input[type="password"]{
+input[type="password"] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -48,12 +52,12 @@ input[type="submit"]:hover {
   background-color: #337ab7;
 }
 
-.login-logout-btn{
+.login-logout-btn {
   float: right;
   background-color: rgb(161, 159, 159);
 }
 
-.login-button{
+.login-button {
   float: left;
   margin-left: 30px;
   display: flex
@@ -88,7 +92,7 @@ input[type="submit"]:hover {
   padding: 10px;
 }
 
-.middle-text{
+.middle-text {
   bottom: 5%;
   position: absolute;
   left: 50%;
@@ -97,10 +101,18 @@ input[type="submit"]:hover {
   color: #3174af;
 }
 
-.collect-buttons{
+.collect-buttons {
   padding: 50px;
 }
 
-.info{
+.info {
   margin: 70px;
+}
+
+.admin-panel {
+  background-color: rgb(224, 224, 240);
+  width: 1200px;
+  margin-top: 30px;
+  margin-right: 10px;
+  margin-bottom: 95px;
 }

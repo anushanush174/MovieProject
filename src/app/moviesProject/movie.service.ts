@@ -13,6 +13,8 @@ export interface Movie {
   storyline?: string;
   id?: number;
   posterUrl?: string;
+  description?: string;
+  movie_status?: string;
 }
 
 @Injectable()

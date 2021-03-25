@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/auth-service';
 import { Movie, MovieService } from '../movie.service';
-import {User} from '../../auth/auth.service';
+import { User } from '../../auth/auth.service';
 
 @Component({
   selector: 'app-movie-list',
@@ -22,7 +22,6 @@ export class MovieListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const notAuthUser = {login: '', password: '', email: '', user_type: 'stranger'};
     if (localStorage.getItem('userData') === null) {
       this.userData = null;
     }else {

@@ -32324,26 +32324,6 @@
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNjI3NjY1Mjg3MV5BMl5BanBnXkFtZTgwMzk5MDQ3MjE@._V1_SY500_CR0,0,340,500_AL_.jpg",
       "description": "nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuannkaragrutyuannkaragrutyuannkaragrutyuannkaragrutyuannkankaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuannkaragrutyuannkaragrutyuanragrutyuannkaragrutyuannkaragrutyuannkaragrutyuan",
       "id": "tYiOosL"
-    },
-    {
-      "title": "my loved movie",
-      "year": "2021",
-      "actors": "anush ",
-      "duration": "2h 3sec",
-      "rating": "",
-      "genres": "Documentary",
-      "description": "a story about something that cant understand",
-      "id": "NMepeuR"
-    },
-    {
-      "title": "uj",
-      "year": "kk",
-      "actors": "kmkm",
-      "duration": "mkm",
-      "rating": "",
-      "genres": "",
-      "description": "",
-      "id": "kHF23lv"
     }
   ],
   "users": [
@@ -32411,32 +32391,11 @@
       "user_type": "user"
     },
     {
-      "login": "t",
+      "login": "user",
       "email": "t@t",
-      "password": "tttttt",
+      "password": "123456",
       "id": "ocbAmQU",
       "user_type": "user"
     },
-    {
-      "login": "u",
-      "email": "u@u",
-      "password": "uuuuuu",
-      "id": "3vMLnIR",
-      "user_type": "user"
-    },
-    {
-      "login": "rr",
-      "email": "r@r",
-      "password": "rrrrrr",
-      "user_type": "user",
-      "id": "PNvcddK"
-    },
-    {
-      "login": "uuu",
-      "email": "uuu@uuu",
-      "password": "uuuuuu",
-      "user_type": "user",
-      "id": "QunG7EA"
-    }
   ]
 }
