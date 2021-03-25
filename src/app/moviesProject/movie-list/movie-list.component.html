@@ -19,7 +19,7 @@
       <div>user Type: {{userData.user_type}}</div>
     </strong>
     <div *ngIf="userData.user_type === 'admin'">
-      <button class="btn-inProgress">In Progress</button>
+      <button class="btn-inProgress" routerLink="/movie-status">In Progress</button>
     </div>
   </div>
 
@@ -62,7 +62,6 @@
             </div>
           </span>
         </div>
-
       </div>
       <div class="btns">
         <button class="btn" (click)="nextPage()">Next</button>

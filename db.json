@@ -32391,11 +32391,32 @@
       "user_type": "user"
     },
     {
-      "login": "user",
+      "login": "t",
       "email": "t@t",
-      "password": "123456",
+      "password": "tttttt",
       "id": "ocbAmQU",
       "user_type": "user"
     },
+    {
+      "login": "u",
+      "email": "u@u",
+      "password": "uuuuuu",
+      "id": "3vMLnIR",
+      "user_type": "user"
+    },
+    {
+      "login": "rr",
+      "email": "r@r",
+      "password": "rrrrrr",
+      "user_type": "user",
+      "id": "PNvcddK"
+    },
+    {
+      "login": "uuu",
+      "email": "uuu@uuu",
+      "password": "uuuuuu",
+      "user_type": "user",
+      "id": "QunG7EA"
+    }
   ]
 }
