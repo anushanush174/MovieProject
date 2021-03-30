@@ -32324,6 +32324,50 @@
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNjI3NjY1Mjg3MV5BMl5BanBnXkFtZTgwMzk5MDQ3MjE@._V1_SY500_CR0,0,340,500_AL_.jpg",
       "description": "nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuannkaragrutyuannkaragrutyuannkaragrutyuannkaragrutyuannkankaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuan nkaragrutyuannkaragrutyuannkaragrutyuanragrutyuannkaragrutyuannkaragrutyuannkaragrutyuan",
       "id": "tYiOosL"
+    },
+    {
+      "title": "admin",
+      "year": "movie",
+      "actors": "admin",
+      "duration": "admin",
+      "rating": "",
+      "genres": "Comedy",
+      "description": "admin added a movie status must be approved",
+      "movie_status": "approved",
+      "id": "IHSs1dr"
+    },
+    {
+      "title": "test",
+      "year": "test",
+      "actors": "test",
+      "duration": "test",
+      "rating": "",
+      "genres": "Crime",
+      "description": "te status must be INPROGRESS",
+      "movie_status": "inProgress",
+      "id": "Vzvf8-x"
+    },
+    {
+      "title": "9",
+      "year": "9",
+      "actors": "9",
+      "duration": "9",
+      "rating": "",
+      "genres": "",
+      "description": "9",
+      "movie_status": "inProgress",
+      "id": "s4JXamR"
+    },
+    {
+      "title": "test",
+      "year": "123456",
+      "actors": "456",
+      "duration": "6541",
+      "rating": "",
+      "genres": "",
+      "description": "5156",
+      "movie_status": "inProgress",
+      "id": "bmCMQ32"
     }
   ],
   "users": [

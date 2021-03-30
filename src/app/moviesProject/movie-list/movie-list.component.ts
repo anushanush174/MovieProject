@@ -37,7 +37,6 @@ export class MovieListComponent implements OnInit {
       this.isLogged = false;
       this.movieService.getMovieList();
     }
-
   }
 
   public onLogout(): any {
@@ -49,6 +48,7 @@ export class MovieListComponent implements OnInit {
 
   getMovies(): void {
     this.movieService.subject.subscribe((data: Movie[]) => {
+      console.log(data);
       this.movieService.getRatingAverage(data);
       this.movieList = data;
     });
