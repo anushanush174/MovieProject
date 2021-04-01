@@ -49,8 +49,13 @@ export class MovieListComponent implements OnInit {
   getMovies(): void {
     this.movieService.subject.subscribe((data: Movie[]) => {
       console.log(data);
+      // data.forEach(movie => {
+      //   console.log(movie);
+        // if (movie.movie_status === 'approved'){
       this.movieService.getRatingAverage(data);
       this.movieList = data;
+        // }
+      // });
     });
   }
 

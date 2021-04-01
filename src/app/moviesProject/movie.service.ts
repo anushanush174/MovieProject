@@ -1,12 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import {Observable, Subject} from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 export interface Movie {
   title?: string;
   year?: number;
-  genres?: string;
+  genres?: any;
   actors?: string;
   duration?: number;
   rating?: number;
@@ -21,6 +21,7 @@ export interface Movie {
 export class MovieService {
   private API_URL = environment.API_URL + 'movies';
   public subject = new Subject<any>();
+  public inProgressSubj = new Subject<any>();
 
   public paramsForSearch = {
     genres_like: '',
@@ -28,7 +29,7 @@ export class MovieService {
     _limit: 10,
     year: '',
     title: '',
-    status: '',
+    movie_status: 'approved',
   };
 
   constructor(private http: HttpClient) {}
@@ -46,10 +47,10 @@ export class MovieService {
   getMovieList(): void {
     let url = '?';
     const keys = Object.keys(this.paramsForSearch); // ["_page", "_limit", "year", "title"]
-    url = url + 'status!=inProgress&';
+    // url += 'movie_status!=inProgress&';
     keys.forEach((key) => { // console.log(key)  _page ...
       if (this.paramsForSearch[key]) {
-        url = url + key + '=' + this.paramsForSearch[key] + '&';
+        url += key + '=' + this.paramsForSearch[key] + '&';
         console.log(url);
       }
     });
@@ -58,7 +59,15 @@ export class MovieService {
     });
   }
 
-  deleteMovie(id: number): any {
+  getInProgressList(): any {
+    const url = '?movie_status=inProgress';
+    this.http.get(this.API_URL + url).subscribe( movies => {
+      console.log(movies);
+      this.inProgressSubj.next(movies);
+    });
+  }
+
+  deleteMovie(id: number): Observable<Movie> {
     return this.http.delete<Movie>(this.API_URL + `/${id}`);
   }
 
