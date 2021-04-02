@@ -53,7 +53,7 @@
         "Rob Riggle"
       ],
       "imdbRating": "",
-      "movie_status": "inProgress",
+      "movie_status": "approved",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjg0NjU1MjgyNF5BMl5BanBnXkFtZTgwNzc5NjYyNDM@._V1_SY500_CR0,0,337,500_AL_.jpg"
     },
     {
@@ -32921,47 +32921,25 @@
     },
     {
       "title": "test",
-      "year": "test",
-      "actors": "test",
-      "duration": "test",
-      "rating": "",
-      "genres": "Crime",
-      "description": "te status must be INPROGRESS",
-      "movie_status": "inProgress",
-      "id": "Vzvf8-x"
-    },
-    {
-      "title": "9",
-      "year": "9",
-      "actors": "9",
-      "duration": "9",
-      "rating": "",
-      "genres": "",
-      "description": "9",
-      "movie_status": "inProgress",
-      "id": "s4JXamR"
-    },
-    {
-      "title": "test",
       "year": "123456",
       "actors": "456",
       "duration": "6541",
       "rating": "",
       "genres": "",
       "description": "5156",
-      "movie_status": "inProgress",
+      "movie_status": "approved",
       "id": "bmCMQ32"
     },
     {
-      "title": "Test Movie",
-      "year": "2021",
-      "actors": "jhoni depp",
-      "duration": "2h",
+      "title": "sc",
+      "year": "",
+      "actors": "",
+      "duration": "",
       "rating": "",
-      "genres": "Comedy",
-      "description": "some tes proggres in Progress",
-      "movie_status": "inProgress",
-      "id": "ZkCi3NV"
+      "genres": "",
+      "description": "sc",
+      "movie_status": "approved",
+      "id": "fSNMgD5"
     }
   ],
   "users": [

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Movie, MovieService} from '../movie.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-movie-status',
@@ -7,21 +8,37 @@ import {Movie, MovieService} from '../movie.service';
   styleUrls: ['./movie-status.component.css']
 })
 export class MovieStatusComponent implements OnInit {
-  private inProgressList: Movie;
-  constructor(private movieService: MovieService) { }
+  public inProgressList: Movie;
+  private  id: string;
+  constructor(
+    private movieService: MovieService,
+    private route: ActivatedRoute,
+  ) { }
 
   ngOnInit(): void {
     this.movieService.getInProgressList();
     this.movieService.inProgressSubj.subscribe(movies => {
       this.inProgressList = movies;
     });
+
+    this.id = this.route.snapshot.paramMap.get('id');
+    console.log(this.route.snapshot.paramMap);
   }
 
-  reject(): void {
-    console.log('reject');
+  public reject(id: string | number): void {
+    this.movieService.deleteMovie(id).subscribe(() => {
+      this.movieService.getInProgressList();
+    });
   }
 
-  approve(): void {
-    console.log('approve');
+  public approve(id: string | number): void {
+    const movieStatus = {movie_status: 'approved'};
+    this.movieService.changeMovieStatus(id, movieStatus).subscribe(() => {
+      this.getMovieList();
+    });
+  }
+
+  private getMovieList(): any[]{
+    return this.movieService.getInProgressList();
   }
 }

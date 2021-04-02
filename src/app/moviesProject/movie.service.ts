@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {Observable, Subject} from 'rxjs';
 import { environment } from 'src/environments/environment';
+import {User} from '../auth/auth.service';
 
 export interface Movie {
   title?: string;
@@ -64,7 +65,7 @@ export class MovieService {
     });
   }
 
-  deleteMovie(id: number): Observable<Movie> {
+  deleteMovie(id: number | string): Observable<Movie> {
     return this.http.delete<Movie>(this.API_URL + `/${id}`);
   }
 
@@ -72,11 +73,15 @@ export class MovieService {
     return this.http.post<Movie>(this.API_URL, movie);
   }
 
-  getMovieById(id: number): any {
+  getMovieById(id: string | number): any {
     return this.http.get<void>(this.API_URL + `/${id}`);
   }
 
   putEditedMovie(id: number, movie: Movie): any {
     return this.http.put<Movie>(this.API_URL + `/${id}`, movie);
+  }
+
+  changeMovieStatus(id: number | string, movie: any): any {
+    return this.http.patch<User>(this.API_URL + `/${id}`, movie);
   }
 }

@@ -1,12 +1,12 @@
 <div [routerLink]="['/']"> <p><strong>To Home Page . . .</strong></p></div>
 <div *ngFor="let movie of inProgressList" class="movie-list">
   <div class="btn-div">
-    <button class="del-btn" (click)="reject()">
+    <button class="del-btn" (click)="reject(movie.id)">
       Reject
     </button>
   </div>
   <div class="btn-div">
-    <button class="edit-btn" (click)="approve()">
+    <button class="edit-btn" (click)="approve(movie.id)">
       Approve
     </button>
   </div>
