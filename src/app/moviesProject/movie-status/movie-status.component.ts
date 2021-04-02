@@ -7,14 +7,21 @@ import {Movie, MovieService} from '../movie.service';
   styleUrls: ['./movie-status.component.css']
 })
 export class MovieStatusComponent implements OnInit {
-  inProgressList: Movie;
+  private inProgressList: Movie;
   constructor(private movieService: MovieService) { }
 
   ngOnInit(): void {
     this.movieService.getInProgressList();
     this.movieService.inProgressSubj.subscribe(movies => {
       this.inProgressList = movies;
-      console.log(movies);
     });
+  }
+
+  reject(): void {
+    console.log('reject');
+  }
+
+  approve(): void {
+    console.log('approve');
   }
 }

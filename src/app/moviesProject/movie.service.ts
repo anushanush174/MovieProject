@@ -47,11 +47,9 @@ export class MovieService {
   getMovieList(): void {
     let url = '?';
     const keys = Object.keys(this.paramsForSearch); // ["_page", "_limit", "year", "title"]
-    // url += 'movie_status!=inProgress&';
     keys.forEach((key) => { // console.log(key)  _page ...
       if (this.paramsForSearch[key]) {
         url += key + '=' + this.paramsForSearch[key] + '&';
-        console.log(url);
       }
     });
     this.http.get(this.API_URL + url).subscribe((movies) => {
@@ -62,7 +60,6 @@ export class MovieService {
   getInProgressList(): any {
     const url = '?movie_status=inProgress';
     this.http.get(this.API_URL + url).subscribe( movies => {
-      console.log(movies);
       this.inProgressSubj.next(movies);
     });
   }

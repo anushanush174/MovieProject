@@ -48,7 +48,6 @@ input[type="submit"]:hover {
 
 .edit-btn {
   float: right;
-  margin-right: 60px;
   background-color: #337ab7;
 }
 
@@ -115,4 +114,24 @@ input[type="submit"]:hover {
   margin-top: 30px;
   margin-right: 10px;
   margin-bottom: 95px;
+}
+
+.movie-list {
+  border-style: wave;
+  margin-top: 5px;
+  position: static;
+  overflow: auto;
+  padding: 10px;
+  background-color: rgb(224, 224, 224);
+  margin-top: 30px;
+  margin-right: 110px;
+}
+
+.list {
+  padding-left: 10px;
+}
+
+.btn-div {
+  float: right;
+  padding: 20px;
 }

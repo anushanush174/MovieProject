@@ -8334,7 +8334,8 @@
         "Drama",
         "Musical",
         "Romance"
-      ],"movie_status": "approved",
+      ],
+      "movie_status": "approved",
       "ratings": [
         8,
         8,
@@ -32950,6 +32951,17 @@
       "description": "5156",
       "movie_status": "inProgress",
       "id": "bmCMQ32"
+    },
+    {
+      "title": "Test Movie",
+      "year": "2021",
+      "actors": "jhoni depp",
+      "duration": "2h",
+      "rating": "",
+      "genres": "Comedy",
+      "description": "some tes proggres in Progress",
+      "movie_status": "inProgress",
+      "id": "ZkCi3NV"
     }
   ],
   "users": [
