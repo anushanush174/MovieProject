@@ -20,9 +20,7 @@ export class MovieStatusComponent implements OnInit {
     this.movieService.inProgressSubj.subscribe(movies => {
       this.inProgressList = movies;
     });
-
     this.id = this.route.snapshot.paramMap.get('id');
-    console.log(this.route.snapshot.paramMap);
   }
 
   public reject(id: string | number): void {

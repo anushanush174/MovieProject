@@ -53,7 +53,7 @@
         "Rob Riggle"
       ],
       "imdbRating": "",
-      "movie_status": "approved",
+      "movie_status": "inProgress",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjg0NjU1MjgyNF5BMl5BanBnXkFtZTgwNzc5NjYyNDM@._V1_SY500_CR0,0,337,500_AL_.jpg"
     },
     {
@@ -32931,15 +32931,26 @@
       "id": "bmCMQ32"
     },
     {
-      "title": "sc",
-      "year": "",
-      "actors": "",
-      "duration": "",
+      "title": "qqqqqqqqqqqqqqqq",
+      "year": "qqqqqqqqq",
+      "actors": "qqqqqqqqqq",
+      "duration": "qqqqqqq",
       "rating": "",
-      "genres": "",
-      "description": "sc",
-      "movie_status": "approved",
-      "id": "fSNMgD5"
+      "genres": "Drama",
+      "description": "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+      "movie_status": "inProgress",
+      "id": "xpIa3wS"
+    },
+    {
+      "title": "wwwwwwwww",
+      "year": "wwwwww",
+      "actors": "wwwwwwwww",
+      "duration": "wwwwwww",
+      "rating": "",
+      "genres": "Documentary",
+      "description": "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
+      "movie_status": "inProgress",
+      "id": "8EvUy5Y"
     }
   ],
   "users": [
@@ -33013,26 +33024,5 @@
       "id": "ocbAmQU",
       "user_type": "user"
     },
-    {
-      "login": "u",
-      "email": "u@u",
-      "password": "uuuuuu",
-      "id": "3vMLnIR",
-      "user_type": "user"
-    },
-    {
-      "login": "rr",
-      "email": "r@r",
-      "password": "rrrrrr",
-      "user_type": "user",
-      "id": "PNvcddK"
-    },
-    {
-      "login": "uuu",
-      "email": "uuu@uuu",
-      "password": "uuuuuu",
-      "user_type": "user",
-      "id": "QunG7EA"
-    }
   ]
 }
